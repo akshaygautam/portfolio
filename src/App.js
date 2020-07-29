@@ -1,16 +1,40 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { Certificates } from "./certificates-section/certificates-section.component";
-
+import CustomHeader from "./header/header.component";
+import { Layout, Breadcrumb } from "antd";
+import CustomFooter from "./footer/footer.component";
 function App() {
+  const { Content, Footer, Header } = Layout;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Awesome profile under development :) </h1>
-        <Certificates></Certificates>
-      </header>
+      <Layout>
+        <Header
+          title="Akshay Gautam"
+          style={{
+            backgroundColor: "pink",
+            position: "fixed",
+            zIndex: 1,
+            width: "100%",
+          }}
+        >
+          <CustomHeader />
+        </Header>
+        <Content
+          className="site-layout"
+          style={{ padding: "0 50px", marginTop: 64 }}
+        >
+          <div
+            className="site-layout-background"
+            style={{ padding: 24, minHeight: 380 }}
+          >
+            <Certificates />
+          </div>
+        </Content>
+        <Footer style={{ backgroundColor: "pink" }}>
+          <CustomFooter />
+        </Footer>
+      </Layout>
     </div>
   );
 }

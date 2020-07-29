@@ -5,7 +5,7 @@ import {
   firestore,
   convertCertificateSnapshotToList,
 } from "../firebase/firebase-utils";
-
+import { Row, Col } from "antd";
 export class Certificates extends React.Component {
   constructor() {
     super();
@@ -29,10 +29,14 @@ export class Certificates extends React.Component {
       (certificate) => certificate.active
     );
     return (
-      <div className="certificates">
-        {filteredCertificates.map((certificate) => (
-          <Certificate key={certificate.id} certificate={certificate} />
-        ))}
+      <div>
+        <Row gutter={[16, 40]}>
+          <Col span={8}>
+            {filteredCertificates.map((certificate) => (
+              <Certificate key={certificate.id} certificate={certificate} />
+            ))}
+          </Col>
+        </Row>
       </div>
     );
   }
