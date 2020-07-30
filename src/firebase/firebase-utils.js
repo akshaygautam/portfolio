@@ -15,6 +15,15 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
+function arraySort(arr, key) {
+  arr.sort(function (a, b) {
+    if (a.sequence < b.sequence) return -1;
+    if (a.sequence < b.sequence) return 1;
+    return 0;
+  });
+  return arr;
+}
+
 export const convertCertificateSnapshotToList = (collections) => {
   const transformedCertificate = collections.docs.map((doc) => {
     const certificate = {
@@ -26,6 +35,16 @@ export const convertCertificateSnapshotToList = (collections) => {
   return transformedCertificate.filter((data) => data.active);
 };
 
+export const convertHeaderOptionSnapshotToList = (headers) => {
+  const transformedHeaders = headers.docs.map((doc) => {
+    const header = {
+      id: doc.id,
+      ...doc.data(),
+    };
+    return header;
+  });
+  return arraySort(transformedHeaders.filter((data) => data.active));
+};
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 

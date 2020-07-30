@@ -4,28 +4,29 @@ import { Layout, Spin, Menu } from "antd";
 import {
   firestore,
   convertCertificateSnapshotToList,
+  convertHeaderOptionSnapshotToList,
 } from "./firebase/firebase-utils";
 import { Content as MyContent } from "./components/content/content.component";
 import { Footer as MyFooter } from "./components/footer/footer.component";
 import { Loading3QuartersOutlined } from "@ant-design/icons";
+import { Route, Switch, withRouter } from "react-router";
+import { BlogsPage } from "./pages/blogs/blogs.page";
+import { CertificationsPage } from "./pages/certifications/certifications.page";
+import { Link } from "react-router-dom";
+import { DemoProjectsPage } from "./pages/demo-projects/demo-projects.page";
+import { UsefulResources } from "./pages/useful-resources/useful-resources.page";
+import { ContactPage } from "./pages/contact/contact.page";
 
 const antIcon = <Loading3QuartersOutlined style={{ fontSize: 24 }} spin />;
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       loading: true,
       portfolioCertificationList: [],
       portfolioDemoProjectList: [],
-      menuItems: [
-        { id: 0, title: "About me" },
-        { id: 1, title: "Certification" },
-        { id: 2, title: "Demo Projects" },
-        { id: 3, title: "Blogs" },
-        { id: 4, title: "Useful Resources" },
-        { id: 5, title: "Contact" },
-      ],
+      headerOptions: [{ sequence: 1, title: "About me", link: "/portfolio" }],
     };
   }
 
@@ -49,6 +50,14 @@ class App extends React.Component {
       );
       this.setState({ loading: false, portfolioDemoProjectList });
     });
+
+    const portfolioHeaderOptions = firestore.collection(
+      "portfolio_header_options"
+    );
+    portfolioHeaderOptions.onSnapshot(async (snapshot) => {
+      const headerOptions = convertHeaderOptionSnapshotToList(snapshot);
+      this.setState({ loading: false, headerOptions });
+    });
   }
 
   renderSpinner() {
@@ -63,12 +72,64 @@ class App extends React.Component {
     return (
       <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
         <div className="logo" />
-        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["0"]}>
-          {this.state.menuItems.map((item) => {
-            return <Menu.Item key={item.id}>{item.title}</Menu.Item>;
+        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
+          {this.state.headerOptions.map((item) => {
+            return (
+              <Menu.Item key={item.sequence}>
+                <Link to={item.link} className="option">
+                  {item.title}
+                </Link>
+              </Menu.Item>
+            );
           })}
         </Menu>
       </Header>
+    );
+  };
+
+  renderHomePage = () => {
+    return (
+      <MyContent
+        portfolioCertificationList={this.state.portfolioCertificationList}
+        portfolioDemoProjectList={this.state.portfolioDemoProjectList}
+      />
+    );
+  };
+
+  renderCertificationsPage = () => {
+    return (
+      <CertificationsPage
+        portfolioCertificationList={this.state.portfolioCertificationList}
+      />
+    );
+  };
+
+  renderDemoProjectsPage = () => {
+    return (
+      <DemoProjectsPage
+        portfolioDemoProjectList={this.state.portfolioDemoProjectList}
+      />
+    );
+  };
+
+  renderContent = () => {
+    return (
+      <Switch>
+        <Route exact path="/portfolio" render={this.renderHomePage} />
+        <Route exact path="/blogs" component={BlogsPage} />
+        <Route
+          exact
+          path="/certifications"
+          component={this.renderCertificationsPage}
+        />
+        <Route
+          exact
+          path="/demo_projects"
+          component={this.renderDemoProjectsPage}
+        />
+        <Route exact path="/useful_resources" component={UsefulResources} />
+        <Route exact path="/contact" component={ContactPage} />
+      </Switch>
     );
   };
 
@@ -81,10 +142,7 @@ class App extends React.Component {
           className="site-layout"
           style={{ padding: "0 50px", marginTop: 64 }}
         >
-          <MyContent
-            portfolioCertificationList={this.state.portfolioCertificationList}
-            portfolioDemoProjectList={this.state.portfolioDemoProjectList}
-          />
+          {this.renderContent()}
         </Content>
         <Footer
           style={{ textAlign: "center", position: "sticky", bottom: "0" }}
@@ -104,4 +162,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default withRouter(App);

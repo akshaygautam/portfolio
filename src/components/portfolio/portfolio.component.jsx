@@ -1,6 +1,5 @@
 import React from "react";
 import "./portfolio.styles.css";
-const style = { background: "#0092ff", padding: "8px 0" };
 
 export const Portfolio = ({ content }) => {
   return (
