@@ -1,12 +1,11 @@
 import React from "react";
 import "./App.css";
-import { Layout, Spin } from "antd";
+import { Layout, Spin, Menu } from "antd";
 import {
   firestore,
   convertCertificateSnapshotToList,
 } from "./firebase/firebase-utils";
 import { Content as MyContent } from "./components/content/content.component";
-import { Header as MyHeader } from "./components/header/header.component";
 import { Footer as MyFooter } from "./components/footer/footer.component";
 import { Loading3QuartersOutlined } from "@ant-design/icons";
 
@@ -19,6 +18,14 @@ class App extends React.Component {
       loading: true,
       portfolioCertificationList: [],
       portfolioDemoProjectList: [],
+      menuItems: [
+        { id: 0, title: "About me" },
+        { id: 1, title: "Certification" },
+        { id: 2, title: "Demo Projects" },
+        { id: 3, title: "Blogs" },
+        { id: 4, title: "Useful Resources" },
+        { id: 5, title: "Contact" },
+      ],
     };
   }
 
@@ -52,13 +59,24 @@ class App extends React.Component {
     );
   }
 
+  renderHeader = (Header) => {
+    return (
+      <Header>
+        <div className="logo" />
+        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["0"]}>
+          {this.state.menuItems.map((item) => {
+            return <Menu.Item key={item.id}>{item.title}</Menu.Item>;
+          })}
+        </Menu>
+      </Header>
+    );
+  };
+
   renderPage() {
     const { Content, Footer, Header } = Layout;
     return (
       <Layout>
-        <Header className="header">
-          <MyHeader />
-        </Header>
+        {this.renderHeader(Header)}
         <Content style={{ padding: "0 50px" }}>
           <MyContent
             portfolioCertificationList={this.state.portfolioCertificationList}

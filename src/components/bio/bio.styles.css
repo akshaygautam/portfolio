@@ -1,0 +1,14 @@
+.bio {
+  height: 100vh;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+
+h1 {
+  color: white;
+  font-size: xx-large;
+}
+
+h3 {
+  color: white;
+  font-size: x-large;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import "./portfolio.styles.css";
+import { Card } from "antd";
 
 export const Portfolio = ({ content }) => {
   return (
