@@ -12,7 +12,7 @@ export const Content = ({
       portfolioCertificationList.length > 0 ? (
       <PortfolioList
         gradientClassName="certificate-gradient"
-        title="Certifications"
+        title="Certifications (View All...)"
         portfolioContentList={portfolioCertificationList}
         showItems="3"
         link="/certifications"
@@ -24,7 +24,7 @@ export const Content = ({
     return portfolioDemoProjectList && portfolioDemoProjectList.length > 0 ? (
       <PortfolioList
         gradientClassName="demo-project-gradient"
-        title="Demo Projects"
+        title="Demo Projects (View All...)"
         portfolioContentList={portfolioDemoProjectList}
         showItems="3"
         link="/demo_projects"
