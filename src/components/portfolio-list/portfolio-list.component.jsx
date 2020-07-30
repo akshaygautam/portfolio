@@ -2,13 +2,13 @@ import React from "react";
 import { Portfolio } from "./../portfolio/portfolio.component";
 import "./portfolio-list.styles.css";
 
-export const PortfolioList = ({ title, portfoliContentList }) => {
+export const PortfolioList = ({ title, portfolioContentList }) => {
   return (
     <div>
-      <h1>{title}</h1>
+      <h2>{title}</h2>
       <div className="portfolio-list">
-        {portfoliContentList.map((portfoliContent) => (
-          <Portfolio content={portfoliContent} />
+        {portfolioContentList.map((portfolioContent) => (
+          <Portfolio content={portfolioContent} />
         ))}
       </div>
     </div>

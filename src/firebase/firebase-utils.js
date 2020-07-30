@@ -23,7 +23,7 @@ export const convertCertificateSnapshotToList = (collections) => {
     };
     return certificate;
   });
-  return transformedCertificate;
+  return transformedCertificate.filter((data) => data.active);
 };
 
 export const auth = firebase.auth();

@@ -17,7 +17,8 @@ class App extends React.Component {
     super();
     this.state = {
       loading: true,
-      portfoliContentList: [],
+      portfolioCertificationList: [],
+      portfolioDemoProjectList: [],
     };
   }
 
@@ -26,8 +27,20 @@ class App extends React.Component {
       "portfolio_certificates"
     );
     portfolioCertificates.onSnapshot(async (snapshot) => {
-      const portfoliContentList = convertCertificateSnapshotToList(snapshot);
-      this.setState({ loading: false, portfoliContentList });
+      const portfolioCertificationList = convertCertificateSnapshotToList(
+        snapshot
+      );
+      this.setState({ loading: false, portfolioCertificationList });
+    });
+
+    const portfolioDemoProjects = firestore.collection(
+      "portfolio_demo_projects"
+    );
+    portfolioDemoProjects.onSnapshot(async (snapshot) => {
+      const portfolioDemoProjectList = convertCertificateSnapshotToList(
+        snapshot
+      );
+      this.setState({ loading: false, portfolioDemoProjectList });
     });
   }
 
@@ -47,7 +60,10 @@ class App extends React.Component {
           <MyHeader />
         </Header>
         <Content style={{ padding: "0 50px" }}>
-          <MyContent portfoliContentList={this.state.portfoliContentList} />
+          <MyContent
+            portfolioCertificationList={this.state.portfolioCertificationList}
+            portfolioDemoProjectList={this.state.portfolioDemoProjectList}
+          />
         </Content>
         <Footer style={{ textAlign: "center" }}>
           <MyFooter />

@@ -1,18 +1,25 @@
 import React from "react";
 import "./content.styles.css";
 import { PortfolioList } from "../portfolio-list/portfolio-list.component";
-export const Content = ({ portfoliContentList }) => {
+export const Content = ({
+  portfolioCertificationList,
+  portfolioDemoProjectList,
+}) => {
   return (
     <div>
-      <PortfolioList
-        title="Certifications"
-        portfoliContentList={portfoliContentList}
-      />
+      {portfolioCertificationList && portfolioCertificationList.length > 0 ? (
+        <PortfolioList
+          title="Certifications"
+          portfolioContentList={portfolioCertificationList}
+        />
+      ) : null}
 
-      <PortfolioList
-        title="Demo projects"
-        portfoliContentList={portfoliContentList}
-      />
+      {portfolioCertificationList && portfolioDemoProjectList.length > 0 ? (
+        <PortfolioList
+          title="Demo projects"
+          portfolioContentList={portfolioDemoProjectList}
+        />
+      ) : null}
     </div>
   );
 };

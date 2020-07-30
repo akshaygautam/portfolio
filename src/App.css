@@ -43,6 +43,12 @@ h1 {
   color: #0cc8c4;
 }
 
+h2 {
+  font-family: "Bigelow Rules";
+  font-size: 72px;
+  color: #0cc8c4;
+}
+
 .spinner {
   display: block;
   margin-left: auto;
