@@ -121,9 +121,9 @@ class App extends React.Component {
           path="/certifications"
           component={this.renderCertificationsPage}
         />
-        <Rout path="/demo_projects" component={this.renderDemoProjectsPage} />
-        <Rout path="/useful_resources" component={UsefulResources} />
-        <Rout path="/contact" component={ContactPage} />
+        <Route path="/demo_projects" component={this.renderDemoProjectsPage} />
+        <Route path="/useful_resources" component={UsefulResources} />
+        <Route path="/contact" component={ContactPage} />
       </Switch>
     );
   };
