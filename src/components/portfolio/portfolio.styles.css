@@ -8,14 +8,18 @@
   backface-visibility: hidden;
   transform: translateZ(0);
   transition: transform 0.25s ease-out;
-  color: white;
 }
 
 .portfolio-container:hover {
   transform: scale(1.05);
 }
 
-img {
-  height: 300px;
-  width: 350px;
+.portfolio-image {
+  height: auto;
+  width: 100%;
+}
+
+.portfolio-display-info {
+  color: white;
+  font-size: large;
 }

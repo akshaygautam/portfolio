@@ -3,17 +3,23 @@
   background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 }
 
-h1 {
+.intro {
   color: white;
   font-size: xx-large;
 }
 
-h3 {
+.content {
   color: white;
   font-size: x-large;
 }
 
-h4 {
+.sub-intro {
   color: white;
   font-size: large;
+  width: auto;
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
 }

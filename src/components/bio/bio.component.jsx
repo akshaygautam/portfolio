@@ -7,13 +7,13 @@ export const Bio = ({ bio }) => {
   return (
     <Card className="bio">
       <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-        <Col span={12}>
-          <img src={imageURL} alt="me.jpg" />
+        <Col span={8}>
+          <img className="profile-image" src={imageURL} alt="me.jpg" />
         </Col>
-        <Col span={12}>
-          <h1>{intro}</h1>
-          <h4>{subIntro}</h4>
-          <h3>{content}</h3>
+        <Col span={16}>
+          <div className="intro">{intro}</div>
+          <div className="sub-intro">{subIntro}</div>
+          <div className="content">{content}</div>
           <SocialBand
             text="Know more"
             textStyle={{
