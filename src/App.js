@@ -1,42 +1,68 @@
 import React from "react";
 import "./App.css";
-import { Certificates } from "./certificates-section/certificates-section.component";
-import CustomHeader from "./header/header.component";
-import { Layout, Breadcrumb } from "antd";
-import CustomFooter from "./footer/footer.component";
-function App() {
-  const { Content, Footer, Header } = Layout;
-  return (
-    <div className="App">
+import { Layout, Spin } from "antd";
+import {
+  firestore,
+  convertCertificateSnapshotToList,
+} from "./firebase/firebase-utils";
+import { Content as MyContent } from "./components/content/content.component";
+import { Header as MyHeader } from "./components/header/header.component";
+import { Footer as MyFooter } from "./components/footer/footer.component";
+import { Loading3QuartersOutlined } from "@ant-design/icons";
+
+const antIcon = <Loading3QuartersOutlined style={{ fontSize: 24 }} spin />;
+
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      loading: true,
+      portfoliContentList: [],
+    };
+  }
+
+  componentDidMount() {
+    const portfolioCertificates = firestore.collection(
+      "portfolio_certificates"
+    );
+    portfolioCertificates.onSnapshot(async (snapshot) => {
+      const portfoliContentList = convertCertificateSnapshotToList(snapshot);
+      this.setState({ loading: false, portfoliContentList });
+    });
+  }
+
+  renderSpinner() {
+    return (
+      <div className="spinner">
+        <Spin size="large" indicator={antIcon} />
+      </div>
+    );
+  }
+
+  renderPage() {
+    const { Content, Footer, Header } = Layout;
+    return (
       <Layout>
-        <Header
-          title="Akshay Gautam"
-          style={{
-            backgroundColor: "pink",
-            position: "fixed",
-            zIndex: 1,
-            width: "100%",
-          }}
-        >
-          <CustomHeader />
+        <Header className="header">
+          <MyHeader />
         </Header>
-        <Content
-          className="site-layout"
-          style={{ padding: "0 50px", marginTop: 64 }}
-        >
-          <div
-            className="site-layout-background"
-            style={{ padding: 24, minHeight: 380 }}
-          >
-            <Certificates />
-          </div>
+        <Content style={{ padding: "0 50px" }}>
+          <MyContent portfoliContentList={this.state.portfoliContentList} />
         </Content>
-        <Footer style={{ backgroundColor: "pink" }}>
-          <CustomFooter />
+        <Footer style={{ textAlign: "center" }}>
+          <MyFooter />
         </Footer>
       </Layout>
-    </div>
-  );
+    );
+  }
+
+  render() {
+    return (
+      <div className="App">
+        {this.state.loading ? this.renderSpinner() : this.renderPage()}
+      </div>
+    );
+  }
 }
 
 export default App;

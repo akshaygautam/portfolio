@@ -1,0 +1,21 @@
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
+  padding: 4px;
+  cursor: pointer;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
+  color: white;
+}
+
+.portfolio-container:hover {
+  transform: scale(1.05);
+}
+
+img {
+  height: 300px;
+  width: 350px;
+}
