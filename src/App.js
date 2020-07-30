@@ -61,7 +61,7 @@ class App extends React.Component {
 
   renderHeader = (Header) => {
     return (
-      <Header>
+      <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
         <div className="logo" />
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["0"]}>
           {this.state.menuItems.map((item) => {
@@ -77,13 +77,18 @@ class App extends React.Component {
     return (
       <Layout>
         {this.renderHeader(Header)}
-        <Content style={{ padding: "0 50px" }}>
+        <Content
+          className="site-layout"
+          style={{ padding: "0 50px", marginTop: 64 }}
+        >
           <MyContent
             portfolioCertificationList={this.state.portfolioCertificationList}
             portfolioDemoProjectList={this.state.portfolioDemoProjectList}
           />
         </Content>
-        <Footer style={{ textAlign: "center" }}>
+        <Footer
+          style={{ textAlign: "center", position: "sticky", bottom: "0" }}
+        >
           <MyFooter />
         </Footer>
       </Layout>

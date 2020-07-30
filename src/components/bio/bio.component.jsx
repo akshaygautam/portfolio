@@ -1,6 +1,6 @@
 import React from "react";
 import "./bio.styles.css";
-import { Row, Col, Card } from "antd";
+import { Row, Col, Card, Divider } from "antd";
 import { SocialBand } from "../social-band/social-band.component";
 export const Bio = ({ bio }) => {
   const { imageURL, content, intro } = bio;
@@ -21,6 +21,7 @@ export const Bio = ({ bio }) => {
               fontSize: "x-large",
             }}
             iconStyle={{ color: "white", margin: "5px", fontSize: "30px" }}
+            tooltipPlacement="bottom"
           />
         </Col>
       </Row>

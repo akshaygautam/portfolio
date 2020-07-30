@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <div className="footer">
       Portfolio ©2020 Created by Akshay Gautam
-      <div>
+      <div className="footer">
         <SocialBand
           text="Connect On"
           textStyle={{
@@ -14,6 +14,7 @@ export const Footer = () => {
             fontSize: "x-large",
           }}
           iconStyle={{ color: "black", fontSize: "20px", margin: "5px" }}
+          tooltipPlacement="top"
         />
       </div>
     </div>

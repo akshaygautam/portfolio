@@ -1,12 +1,17 @@
 import React from "react";
-import { Row, Col } from "antd";
+import { Row, Col, Tooltip } from "antd";
 import {
   MailOutlined,
   FilePdfOutlined,
   GithubOutlined,
   LinkedinOutlined,
 } from "@ant-design/icons";
-export const SocialBand = ({ text, textStyle, iconStyle }) => {
+export const SocialBand = ({
+  text,
+  textStyle,
+  iconStyle,
+  tooltipPlacement,
+}) => {
   return (
     <Row>
       <Col>
@@ -17,7 +22,9 @@ export const SocialBand = ({ text, textStyle, iconStyle }) => {
           rel="noopener noreferrer"
           style={iconStyle}
         >
-          <LinkedinOutlined />
+          <Tooltip placement={tooltipPlacement} title="LikedIn">
+            <LinkedinOutlined />
+          </Tooltip>
         </a>
         <a
           href="https://github.com/akshaygautam"
@@ -25,7 +32,9 @@ export const SocialBand = ({ text, textStyle, iconStyle }) => {
           rel="noopener noreferrer"
           style={iconStyle}
         >
-          <GithubOutlined />
+          <Tooltip placement={tooltipPlacement} title="Github">
+            <GithubOutlined />
+          </Tooltip>
         </a>
         <a
           href="https://drive.google.com/file/d/1ZJuFFjg1Mmc7KcfhNG5c5j0LA5AHRrXp/view?usp=sharing"
@@ -33,10 +42,14 @@ export const SocialBand = ({ text, textStyle, iconStyle }) => {
           rel="noopener noreferrer"
           style={iconStyle}
         >
-          <FilePdfOutlined />
+          <Tooltip placement={tooltipPlacement} title="Resume">
+            <FilePdfOutlined />
+          </Tooltip>
         </a>
         <a href="mailto:akshay.gautam2209@gmail.com" style={iconStyle}>
-          <MailOutlined />
+          <Tooltip placement={tooltipPlacement} title="Email">
+            <MailOutlined />
+          </Tooltip>
         </a>
       </Col>
     </Row>
