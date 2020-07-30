@@ -115,20 +115,15 @@ class App extends React.Component {
   renderContent = () => {
     return (
       <Switch>
-        <Route exact path="/portfolio" render={this.renderHomePage} />
-        <Route exact path="/blogs" component={BlogsPage} />
+        <Route path="/portfolio" render={this.renderHomePage} />
+        <Route path="/blogs" component={BlogsPage} />
         <Route
-          exact
           path="/certifications"
           component={this.renderCertificationsPage}
         />
-        <Route
-          exact
-          path="/demo_projects"
-          component={this.renderDemoProjectsPage}
-        />
-        <Route exact path="/useful_resources" component={UsefulResources} />
-        <Route exact path="/contact" component={ContactPage} />
+        <Rout path="/demo_projects" component={this.renderDemoProjectsPage} />
+        <Rout path="/useful_resources" component={UsefulResources} />
+        <Rout path="/contact" component={ContactPage} />
       </Switch>
     );
   };
