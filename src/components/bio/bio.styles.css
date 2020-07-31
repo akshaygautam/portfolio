@@ -1,25 +1,10 @@
 .bio {
   height: 100vh;
   background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-}
-
-.intro {
   color: white;
-  font-size: xx-large;
 }
 
-.content {
-  color: white;
-  font-size: x-large;
-}
-
-.sub-intro {
-  color: white;
-  font-size: large;
-  width: auto;
-}
-
-.profile-image {
+.bio img {
   width: 100%;
-  height: auto;
+  height: 60vh;
 }

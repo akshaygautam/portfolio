@@ -68,25 +68,6 @@ class App extends React.Component {
     );
   }
 
-  renderHeader = (Header) => {
-    return (
-      <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
-        <div className="logo" />
-        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
-          {this.state.headerOptions.map((item) => {
-            return (
-              <Menu.Item key={item.sequence}>
-                <Link to={item.link} className="option">
-                  {item.title}
-                </Link>
-              </Menu.Item>
-            );
-          })}
-        </Menu>
-      </Header>
-    );
-  };
-
   renderHomePage = () => {
     return (
       <MyContent
@@ -131,17 +112,24 @@ class App extends React.Component {
   renderPage() {
     const { Content, Footer, Header } = Layout;
     return (
-      <Layout>
-        {this.renderHeader(Header)}
-        <Content
-          className="site-layout"
-          style={{ padding: "0 50px", marginTop: 64 }}
-        >
-          {this.renderContent()}
-        </Content>
-        <Footer
-          style={{ textAlign: "center", position: "sticky", bottom: "0" }}
-        >
+      <Layout hasSider="false" className="layout">
+        <Header>
+          <div className="logo"></div>
+          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
+            {this.state.headerOptions.map((item) => {
+              const { pathname } = this.props.history.location;
+              return (
+                <Menu.Item active={item.link === pathname} key={item.sequence}>
+                  <Link to={item.link} className="option">
+                    {item.title}
+                  </Link>
+                </Menu.Item>
+              );
+            })}
+          </Menu>
+        </Header>
+        <Content>{this.renderContent()}</Content>
+        <Footer>
           <MyFooter />
         </Footer>
       </Layout>

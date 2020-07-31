@@ -5,9 +5,15 @@ export const Portfolio = ({ content }) => {
   return (
     <div className="portfolio-container">
       <a href={content.siteURL} target="_blank" rel="noopner noreferrer">
-        <img className="portfolio-image" alt="monster" src={content.imageURL} />
+        <img
+          className="img-responsive img-thumbnail"
+          alt="monster"
+          src={content.imageURL}
+        />
       </a>
-      <div className="portfolio-display-info">{content.displayInfo}</div>
+      <h3 style={{ color: "white", marginTop: "2px" }} className="text-primary">
+        {content.displayInfo}
+      </h3>
     </div>
   );
 };

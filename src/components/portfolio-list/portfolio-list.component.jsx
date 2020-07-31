@@ -1,9 +1,9 @@
 import React from "react";
 import { Portfolio } from "./../portfolio/portfolio.component";
 import "./portfolio-list.styles.css";
-import { Row, Col, Card, Divider, Button, Space } from "antd";
+import { Card, Divider, Button } from "antd";
 import { Link } from "react-router-dom";
-import { MoreOutlined } from "@ant-design/icons";
+import { SmallDashOutlined } from "@ant-design/icons";
 
 export const PortfolioList = ({
   title,
@@ -11,35 +11,46 @@ export const PortfolioList = ({
   gradientClassName,
   showItems,
   link,
+  showMore,
 }) => {
   return (
     <Card className={gradientClassName}>
-      <Divider orientation="center">
-        <Link to={link} className="portfolio-divider-content">
-          <div>{title}</div>
-        </Link>
-      </Divider>
-      <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-        {portfolioContentList
-          .filter((portfolioContent, idx) => idx < showItems)
-          .map((portfolioContent) => (
-            <Col className="gutter-row" key={portfolioContent.id} span={6}>
-              <Portfolio key={portfolioContent.id} content={portfolioContent} />
-            </Col>
-          ))}
-        <div>
+      <div className="fluid-container">
+        <Divider orientation="center">
           <Link to={link} className="portfolio-divider-content">
-            <Button
-              type="ghost"
-              shape="round"
-              icon={<MoreOutlined />}
-              size={"large"}
-            >
-              Show All
-            </Button>
+            <div>{title}</div>
           </Link>
+        </Divider>
+        <div className="row">
+          {portfolioContentList
+            .filter((portfolioContent, idx) => idx < showItems)
+            .map((portfolioContent) => (
+              <div className="col-md-4 col-xs-4" key={portfolioContent.id}>
+                <Portfolio
+                  key={portfolioContent.id}
+                  content={portfolioContent}
+                />
+              </div>
+            ))}
         </div>
-      </Row>
+        {showMore ? (
+          <div className="row">
+            <div className="col-md-2 col-xs-4">
+              <Link to={link} className="portfolio-Col span={6}ider-content">
+                <Button
+                  style={{ color: "white" }}
+                  type="ghost"
+                  shape="round"
+                  icon={<SmallDashOutlined />}
+                  size={"large"}
+                >
+                  Show All
+                </Button>
+              </Link>
+            </div>
+          </div>
+        ) : null}
+      </div>
     </Card>
   );
 };

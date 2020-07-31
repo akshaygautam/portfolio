@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Tooltip } from "antd";
+import { Tooltip } from "antd";
 import {
   MailOutlined,
   FilePdfOutlined,
@@ -13,8 +13,8 @@ export const SocialBand = ({
   tooltipPlacement,
 }) => {
   return (
-    <Row>
-      <Col>
+    <div className="row">
+      <div className="col-md-* col-xs-*">
         <span style={textStyle}>{text}</span>
         <a
           href="https://www.linkedin.com/in/akshay-gautam-74577a117/"
@@ -51,7 +51,7 @@ export const SocialBand = ({
             <MailOutlined />
           </Tooltip>
         </a>
-      </Col>
-    </Row>
+      </div>
+    </div>
   );
 };
