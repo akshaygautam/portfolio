@@ -1,8 +1,4 @@
 .portfolio-container {
-  display: flex;
-  flex-direction: column;
-  border-radius: 2px;
-  padding: "8px 0";
   cursor: pointer;
   -moz-osx-font-smoothing: grayscale;
   backface-visibility: hidden;
@@ -21,5 +17,4 @@
 
 .portfolio-display-info {
   color: white;
-  font-size: large;
 }

@@ -8,10 +8,7 @@ import {
 } from "./firebase/firebase-utils";
 import { Content as MyContent } from "./components/content/content.component";
 import { Footer as MyFooter } from "./components/footer/footer.component";
-import {
-  Loading3QuartersOutlined,
-  PlayCircleOutlined,
-} from "@ant-design/icons";
+import { Loading3QuartersOutlined } from "@ant-design/icons";
 import { Route, Switch, withRouter } from "react-router";
 import { BlogsPage } from "./pages/blogs/blogs.page";
 import { CertificationsPage } from "./pages/certifications/certifications.page";

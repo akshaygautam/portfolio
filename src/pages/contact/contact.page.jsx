@@ -3,9 +3,6 @@ import { SocialBand } from "../../components/social-band/social-band.component";
 import "./contact.page.css";
 import { Card } from "antd";
 export class ContactPage extends React.Component {
-  constructor() {
-    super();
-  }
   render() {
     return (
       <Card>

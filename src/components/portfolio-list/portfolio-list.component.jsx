@@ -25,7 +25,7 @@ export const PortfolioList = ({
           {portfolioContentList
             .filter((portfolioContent, idx) => idx < showItems)
             .map((portfolioContent) => (
-              <div className="col-md-4 col-xs-4" key={portfolioContent.id}>
+              <div className="col-md-4 col-xs-12" key={portfolioContent.id}>
                 <Portfolio
                   key={portfolioContent.id}
                   content={portfolioContent}
@@ -35,7 +35,7 @@ export const PortfolioList = ({
         </div>
         {showMore ? (
           <div className="row">
-            <div className="col-md-2 col-xs-4">
+            <div className="col-md-* col-xs-*">
               <Link to={link} className="portfolio-Col span={6}ider-content">
                 <Button
                   style={{ color: "white" }}

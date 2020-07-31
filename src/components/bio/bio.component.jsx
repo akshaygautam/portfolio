@@ -9,14 +9,14 @@ export const Bio = ({ bio }) => {
     <Card className="bio">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-xs-6 col-md-4">
+          <div className="col-xs-12 col-md-4">
             <img
               className="img-responsive img-thumbnail"
               src={imageURL}
               alt="me.jpg"
             />
           </div>
-          <div className="col-xs-* col-md-*">
+          <div className="col-xs-12 col-md-8">
             <h1>{intro}</h1>
             <ReactTypingEffect cursor="_" className="lead" text={subIntro} />
             <div id="demo">{content}</div>

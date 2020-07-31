@@ -16,11 +16,21 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 function arraySort(arr, key) {
-  arr.sort(function (a, b) {
-    if (a.sequence < b.sequence) return -1;
-    if (a.sequence < b.sequence) return 1;
-    return 0;
-  });
+  if (key === "date") {
+    arr.sort(function (a, b) {
+      let dateA = new Date(a.created);
+      let dateB = new Date(b.created);
+      if (dateA > dateB) return -1;
+      if (dateA < dateB) return 1;
+      return 0;
+    });
+  } else {
+    arr.sort(function (a, b) {
+      if (a.sequence < b.sequence) return -1;
+      if (a.sequence < b.sequence) return 1;
+      return 0;
+    });
+  }
   return arr;
 }
 
@@ -45,7 +55,21 @@ export const convertHeaderOptionSnapshotToList = (headers) => {
   });
   return arraySort(transformedHeaders.filter((data) => data.active));
 };
-export const auth = firebase.auth();
+
+export const convertResourcesSnapshotToList = (resources) => {
+  let transformedResources = resources.docs.map((doc) => {
+    const header = {
+      id: doc.id,
+      ...doc.data(),
+    };
+    return header;
+  });
+
+  for (var i = 1; i < 5; i++) {
+    transformedResources = transformedResources.concat(transformedResources);
+  }
+  return arraySort(transformedResources, "date");
+};
 export const firestore = firebase.firestore();
 
 export default firebase;

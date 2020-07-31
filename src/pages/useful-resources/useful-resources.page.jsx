@@ -1,50 +1,30 @@
 import React from "react";
 import { UsefulResourceList } from "../../components/useful-resource-list/useful-resource-list.component";
 import { Card } from "antd";
+import {firestore, convertResourcesSnapshotToList} from '../../firebase/firebase-utils'
 export class UsefulResources extends React.Component {
   constructor() {
     super();
     this.state = {
-      resourceList: [
-        {
-          id: 1,
-          title: "Test1",
-          desc: "Hey there",
-          category: "Java",
-          sourceName: "Google",
-          sourceURL: "https://google.com",
-        },
-        {
-          id: 2,
-          title: "Test1",
-          desc: "Hey there",
-          category: "Java",
-          sourceName: "Google",
-          sourceURL: "https://google.com",
-        },
-        {
-          id: 3,
-          title: "Test1",
-          desc: "Hey there",
-          category: "Java",
-          sourceName: "Google",
-          sourceURL: "https://google.com",
-        },
-        {
-          id: 4,
-          title: "Test1",
-          desc: "Hey there",
-          category: "Java",
-          sourceName: "Google",
-          sourceURL: "https://google.com",
-        },
-      ],
+      resourceList: [],
+      loading:true
     };
+  }
+  componentDidMount() {
+    const portfolioResources = firestore.collection(
+      "portfolio_useful_resources"
+    );
+    portfolioResources.onSnapshot(async (snapshot) => {
+      const resourceList = convertResourcesSnapshotToList(
+        snapshot
+      );
+      this.setState({ loading: false, resourceList });
+    });
   }
   render() {
     return (
       <Card>
-        <UsefulResourceList resourceList={this.state.resourceList} />
+        <UsefulResourceList loading={this.state.loading} resourceList={this.state.resourceList} />
       </Card>
     );
   }

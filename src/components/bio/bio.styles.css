@@ -1,12 +1,12 @@
 .bio {
-  height: 50vh;
+  height: auto;
   background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
   color: white;
 }
 
 .bio img {
   width: 50vh;
-  height: 40vh;
+  height: 60vh;
 }
 
 .bio h1 {

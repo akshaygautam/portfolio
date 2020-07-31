@@ -27,15 +27,17 @@ const columns = [
     dataIndex: "category",
     responsive: ["lg"],
   },
+  {
+    title: "Added On",
+    dataIndex: "created",
+    responsive: ["lg"],
+  },
 ];
 
 export const UsefulResourceList = ({ resourceList, loading }) => {
-  for (var i = 1; i < 5; i++) {
-    resourceList = resourceList.concat(resourceList);
-  }
   return (
     <Card className="resource-list" loading={loading}>
-      <Divider  orientation="center">
+      <Divider orientation="center">
         <h1>Resources</h1>
       </Divider>
       <Card>
