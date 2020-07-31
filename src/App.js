@@ -20,7 +20,6 @@ import Avatar from "antd/lib/avatar/avatar";
 
 const antIcon = <Loading3QuartersOutlined style={{ fontSize: 24 }} spin />;
 const { Content, Footer, Header } = Layout;
-
 class App extends React.Component {
   constructor(props) {
     super(props);
