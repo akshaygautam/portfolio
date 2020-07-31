@@ -8,7 +8,7 @@ export const Bio = ({ bio }) => {
     <Card className="bio">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-xs-8 col-md-6">
+          <div className="col-xs-6 col-md-4">
             <img
               className="img-responsive img-thumbnail"
               src={imageURL}

@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Layout, Spin, Menu } from "antd";
+import { Layout, Spin, Menu, BackTop } from "antd";
 import {
   firestore,
   convertCertificateSnapshotToList,
@@ -8,7 +8,10 @@ import {
 } from "./firebase/firebase-utils";
 import { Content as MyContent } from "./components/content/content.component";
 import { Footer as MyFooter } from "./components/footer/footer.component";
-import { Loading3QuartersOutlined } from "@ant-design/icons";
+import {
+  Loading3QuartersOutlined,
+  PlayCircleOutlined,
+} from "@ant-design/icons";
 import { Route, Switch, withRouter } from "react-router";
 import { BlogsPage } from "./pages/blogs/blogs.page";
 import { CertificationsPage } from "./pages/certifications/certifications.page";
@@ -18,6 +21,7 @@ import { UsefulResources } from "./pages/useful-resources/useful-resources.page"
 import { ContactPage } from "./pages/contact/contact.page";
 
 const antIcon = <Loading3QuartersOutlined style={{ fontSize: 24 }} spin />;
+const { Content, Footer, Header } = Layout;
 
 class App extends React.Component {
   constructor(props) {
@@ -27,6 +31,7 @@ class App extends React.Component {
       portfolioCertificationList: [],
       portfolioDemoProjectList: [],
       headerOptions: [{ sequence: 1, title: "About me", link: "/portfolio" }],
+      selectedHeader: ["1", "2"],
     };
   }
 
@@ -110,16 +115,26 @@ class App extends React.Component {
   };
 
   renderPage() {
-    const { Content, Footer, Header } = Layout;
+    let selectedKeys = [];
+    let selectedOption = this.state.headerOptions.find(
+      (option) => option.link === this.props.history.location.pathname
+    );
+    if (selectedOption) {
+      selectedKeys.push(selectedOption.id + "");
+    }
     return (
       <Layout hasSider="false" className="layout">
         <Header>
           <div className="logo"></div>
-          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
+          <Menu
+            theme="dark"
+            mode="horizontal"
+            selectedKeys={selectedKeys}
+            defaultSelectedKeys={["1"]}
+          >
             {this.state.headerOptions.map((item) => {
-              const { pathname } = this.props.history.location;
               return (
-                <Menu.Item active={item.link === pathname} key={item.sequence}>
+                <Menu.Item key={item.id}>
                   <Link to={item.link} className="option">
                     {item.title}
                   </Link>
@@ -128,7 +143,10 @@ class App extends React.Component {
             })}
           </Menu>
         </Header>
-        <Content>{this.renderContent()}</Content>
+        <Content>
+          {this.renderContent()}
+          <BackTop />
+        </Content>
         <Footer>
           <MyFooter />
         </Footer>

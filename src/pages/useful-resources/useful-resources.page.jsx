@@ -6,10 +6,38 @@ export class UsefulResources extends React.Component {
     super();
     this.state = {
       resourceList: [
-        { id: 1, title: "Test1", imgURL: "", sourceURL: "google.com" },
-        { id: 2, title: "Test1", imgURL: "", sourceURL: "google.com" },
-        { id: 3, title: "Test1", imgURL: "", sourceURL: "google.com" },
-        { id: 4, title: "Test1", imgURL: "", sourceURL: "google.com" },
+        {
+          id: 1,
+          title: "Test1",
+          desc: "Hey there",
+          category: "Java",
+          sourceName: "Google",
+          sourceURL: "https://google.com",
+        },
+        {
+          id: 2,
+          title: "Test1",
+          desc: "Hey there",
+          category: "Java",
+          sourceName: "Google",
+          sourceURL: "https://google.com",
+        },
+        {
+          id: 3,
+          title: "Test1",
+          desc: "Hey there",
+          category: "Java",
+          sourceName: "Google",
+          sourceURL: "https://google.com",
+        },
+        {
+          id: 4,
+          title: "Test1",
+          desc: "Hey there",
+          category: "Java",
+          sourceName: "Google",
+          sourceURL: "https://google.com",
+        },
       ],
     };
   }
