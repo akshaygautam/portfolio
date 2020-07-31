@@ -2,6 +2,7 @@ import React from "react";
 import "./bio.styles.css";
 import { Card } from "antd";
 import { SocialBand } from "../social-band/social-band.component";
+import ReactTypingEffect from "react-typing-effect";
 export const Bio = ({ bio }) => {
   const { imageURL, content, intro, subIntro } = bio;
   return (
@@ -16,9 +17,9 @@ export const Bio = ({ bio }) => {
             />
           </div>
           <div className="col-xs-* col-md-*">
-            <div>{intro}</div>
-            <p className="lead">{subIntro}</p>
-            <div>{content}</div>
+            <h1>{intro}</h1>
+            <ReactTypingEffect cursor="_" className="lead" text={subIntro} />
+            <div id="demo">{content}</div>
             <SocialBand
               text="Know more"
               textStyle={{

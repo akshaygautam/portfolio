@@ -126,9 +126,14 @@ class App extends React.Component {
     return (
       <Layout hasSider="false" className="layout">
         <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
-          <div className="logo">
-            <Avatar />
-          </div>
+          <Link to="/portfolio">
+            <div className="logo">
+              <Avatar
+                shape="square"
+                src="https://img.icons8.com/officel/40/000000/popeye.png"
+              />
+            </div>
+          </Link>
           <Menu
             theme="dark"
             mode="horizontal"
