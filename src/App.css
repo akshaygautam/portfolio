@@ -6,6 +6,9 @@ body {
   box-sizing: border-box;
 }
 
-.layout {
-  background: repeating-radial-gradient(#1111, #0000);
+.logo {
+  width: 30px;
+  height: 30px;
+  margin: 16px 24px 16px 0;
+  float: left;
 }

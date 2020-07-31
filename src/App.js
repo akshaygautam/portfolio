@@ -19,6 +19,7 @@ import { Link } from "react-router-dom";
 import { DemoProjectsPage } from "./pages/demo-projects/demo-projects.page";
 import { UsefulResources } from "./pages/useful-resources/useful-resources.page";
 import { ContactPage } from "./pages/contact/contact.page";
+import Avatar from "antd/lib/avatar/avatar";
 
 const antIcon = <Loading3QuartersOutlined style={{ fontSize: 24 }} spin />;
 const { Content, Footer, Header } = Layout;
@@ -124,8 +125,10 @@ class App extends React.Component {
     }
     return (
       <Layout hasSider="false" className="layout">
-        <Header>
-          <div className="logo"></div>
+        <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
+          <div className="logo">
+            <Avatar />
+          </div>
           <Menu
             theme="dark"
             mode="horizontal"
@@ -143,11 +146,11 @@ class App extends React.Component {
             })}
           </Menu>
         </Header>
-        <Content>
+        <Content style={{ padding: "0 50px", marginTop: 64 }}>
           {this.renderContent()}
           <BackTop />
         </Content>
-        <Footer>
+        <Footer style={{ textAlign: "center" }}>
           <MyFooter />
         </Footer>
       </Layout>
