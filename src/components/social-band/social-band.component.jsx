@@ -5,10 +5,6 @@ import {
   FilePdfOutlined,
   GithubOutlined,
   LinkedinOutlined,
-  InstagramOutlined,
-  FacebookOutlined,
-  TwitterOutlined,
-  WhatsAppOutlined,
 } from "@ant-design/icons";
 export const SocialBand = ({
   text,

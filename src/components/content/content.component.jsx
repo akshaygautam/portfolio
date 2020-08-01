@@ -2,10 +2,11 @@ import React from "react";
 import "./content.styles.css";
 import { PortfolioList } from "../portfolio-list/portfolio-list.component";
 import { Bio } from "../bio/bio.component";
-import { Card, Space } from "antd";
+import { Space } from "antd";
 export const Content = ({
   portfolioCertificationList,
   portfolioDemoProjectList,
+  bio
 }) => {
   const renderCertifiacations = () => {
     return portfolioCertificationList &&
@@ -36,13 +37,7 @@ export const Content = ({
   return (
     <Space size="middle" direction="vertical">
       <Bio
-        bio={{
-          imageURL:
-            "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fme%2FIMG_1255.jpg?alt=media&token=93369c81-25d4-4571-bb9c-81d4f209a711",
-          content: "Delhi Based Software Engineer",
-          subIntro: "Developer, Gamer, Singer, Geek",
-          intro: "I'm Akshay Gautam",
-        }}
+        bio={bio}
       />
       {renderCertifiacations()}
       {renderDemoProjectList()}

@@ -59,6 +59,17 @@ export const convertHeaderOptionSnapshotToList = (headers) => {
   return arraySort(transformedHeaders.filter((data) => data.active));
 };
 
+export const convertBioSnapshotToList = (bios) => {
+  const tranformedBio = bios.docs.map((doc) => {
+    const header = {
+      id: doc.id,
+      ...doc.data(),
+    };
+    return header;
+  });
+  return tranformedBio;
+};
+
 export const convertResourcesSnapshotToList = (resources) => {
   let transformedResources = resources.docs.map((doc) => {
     const header = {

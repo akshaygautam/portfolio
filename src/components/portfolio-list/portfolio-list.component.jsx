@@ -33,7 +33,7 @@ export const PortfolioList = ({
               </div>
             ))}
         </div>
-        {showMore ? (
+        {showMore && portfolioContentList.length > 3 ? (
           <div className="row">
             <div className="col-md-* col-xs-*">
               <Link to={link} className="portfolio-Col span={6}ider-content">

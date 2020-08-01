@@ -5,6 +5,7 @@ import {
   firestore,
   convertCertificateSnapshotToList,
   convertHeaderOptionSnapshotToList,
+  convertBioSnapshotToList,
 } from "./firebase/firebase-utils";
 import { Content as MyContent } from "./components/content/content.component";
 import { Footer as MyFooter } from "./components/footer/footer.component";
@@ -29,6 +30,7 @@ class App extends React.Component {
       portfolioDemoProjectList: [],
       headerOptions: [{ sequence: 1, title: "About me", link: "/portfolio" }],
       selectedHeader: ["1", "2"],
+      bio: null,
     };
   }
 
@@ -60,6 +62,14 @@ class App extends React.Component {
       const headerOptions = convertHeaderOptionSnapshotToList(snapshot);
       this.setState({ loading: false, headerOptions });
     });
+
+    const portfolioBio = firestore.collection("portfolio-bio");
+    portfolioBio.onSnapshot(async (snapshot) => {
+      const portfolioBios = convertBioSnapshotToList(snapshot);
+      const bio =
+        portfolioBios[Math.floor(Math.random() * portfolioBios.length)];
+      this.setState({ loading: false, bio });
+    });
   }
 
   renderSpinner() {
@@ -71,10 +81,12 @@ class App extends React.Component {
   }
 
   renderHomePage = () => {
+    if (!this.state.bio) return null;
     return (
       <MyContent
         portfolioCertificationList={this.state.portfolioCertificationList}
         portfolioDemoProjectList={this.state.portfolioDemoProjectList}
+        bio={this.state.bio}
       />
     );
   };
