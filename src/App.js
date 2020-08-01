@@ -148,7 +148,7 @@ class App extends React.Component {
           </Menu>
         </Header>
         <Content style={{ padding: "0 50px", marginTop: 64 }}>
-          {this.renderContent()}
+          {this.state.loading ? this.renderSpinner() : this.renderContent()}
           <BackTop />
         </Content>
         <Footer style={{ textAlign: "center" }}>
@@ -159,11 +159,7 @@ class App extends React.Component {
   }
 
   render() {
-    return (
-      <div className="App">
-        {this.state.loading ? this.renderSpinner() : this.renderPage()}
-      </div>
-    );
+    return <div className="App">{this.renderPage()}</div>;
   }
 }
 

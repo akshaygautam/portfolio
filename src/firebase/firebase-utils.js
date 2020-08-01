@@ -42,7 +42,10 @@ export const convertCertificateSnapshotToList = (collections) => {
     };
     return certificate;
   });
-  return transformedCertificate.filter((data) => data.active);
+  return arraySort(
+    transformedCertificate.filter((data) => data.active),
+    "date"
+  );
 };
 
 export const convertHeaderOptionSnapshotToList = (headers) => {

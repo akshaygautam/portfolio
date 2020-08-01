@@ -5,6 +5,10 @@ import {
   FilePdfOutlined,
   GithubOutlined,
   LinkedinOutlined,
+  InstagramOutlined,
+  FacebookOutlined,
+  TwitterOutlined,
+  WhatsAppOutlined,
 } from "@ant-design/icons";
 export const SocialBand = ({
   text,
@@ -13,9 +17,9 @@ export const SocialBand = ({
   tooltipPlacement,
 }) => {
   return (
-    <div className="row">
+    <div className="row" style={{ marginLeft: "10px" }}>
       <div className="col-md-* col-xs-*">
-        <span style={textStyle}>{text}</span>
+        <p style={textStyle}>{text}</p>
         <a
           href="https://www.linkedin.com/in/akshay-gautam-74577a117/"
           target="_blank"
