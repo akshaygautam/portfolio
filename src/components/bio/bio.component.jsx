@@ -32,6 +32,12 @@ export const Bio = ({ bio }) => {
             />
           </div>
         </div>
+        <div className="row">
+          <div className="col-xs-12 col-md-8" style={{ fontSize: "x-small" }}>
+            <p>Profile will change randomly with every refresh.</p>
+            <p> All Certificates are clickable and will lead you to source.</p>
+          </div>
+        </div>
       </div>
     </Card>
   );
