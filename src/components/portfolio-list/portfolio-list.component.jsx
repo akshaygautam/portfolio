@@ -17,9 +17,7 @@ export const PortfolioList = ({
     <Card className={gradientClassName}>
       <div className="fluid-container">
         <Divider orientation="center">
-          <Link to={link} className="portfolio-divider-content">
-            <div>{title}</div>
-          </Link>
+          <div className="portfolio-divider-content">{title}</div>
         </Divider>
         <div className="row">
           {portfolioContentList

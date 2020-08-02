@@ -2,11 +2,11 @@ import React from "react";
 import "./App.css";
 import { Layout, Spin, Menu, BackTop } from "antd";
 import {
-  firestore,
-  convertCertificateSnapshotToList,
-  convertHeaderOptionSnapshotToList,
-  convertBioSnapshotToList,
-} from "./firebase/firebase-utils";
+  getHeaders,
+  getCertificates,
+  getDemoProject,
+  getBio,
+} from "./data-stores/data-store-master-util";
 import { Content as MyContent } from "./components/content/content.component";
 import { Footer as MyFooter } from "./components/footer/footer.component";
 import { Loading3QuartersOutlined } from "@ant-design/icons";
@@ -29,47 +29,22 @@ class App extends React.Component {
       portfolioCertificationList: [],
       portfolioDemoProjectList: [],
       headerOptions: [{ sequence: 1, title: "About me", link: "/portfolio" }],
-      selectedHeader: ["1", "2"],
       bio: null,
     };
   }
 
   componentDidMount() {
-    const portfolioCertificates = firestore.collection(
-      "portfolio_certificates"
-    );
-    portfolioCertificates.onSnapshot(async (snapshot) => {
-      const portfolioCertificationList = convertCertificateSnapshotToList(
-        snapshot
-      );
-      this.setState({ loading: false, portfolioCertificationList });
-    });
+    const portfolioCertificationList = getCertificates();
+    this.setState({ portfolioCertificationList });
 
-    const portfolioDemoProjects = firestore.collection(
-      "portfolio_demo_projects"
-    );
-    portfolioDemoProjects.onSnapshot(async (snapshot) => {
-      const portfolioDemoProjectList = convertCertificateSnapshotToList(
-        snapshot
-      );
-      this.setState({ loading: false, portfolioDemoProjectList });
-    });
+    const portfolioDemoProjectList = getDemoProject();
+    this.setState({ portfolioDemoProjectList });
 
-    const portfolioHeaderOptions = firestore.collection(
-      "portfolio_header_options"
-    );
-    portfolioHeaderOptions.onSnapshot(async (snapshot) => {
-      const headerOptions = convertHeaderOptionSnapshotToList(snapshot);
-      this.setState({ loading: false, headerOptions });
-    });
+    const headerOptions = getHeaders();
+    this.setState({ headerOptions });
 
-    const portfolioBio = firestore.collection("portfolio-bio");
-    portfolioBio.onSnapshot(async (snapshot) => {
-      const portfolioBios = convertBioSnapshotToList(snapshot);
-      const bio =
-        portfolioBios[Math.floor(Math.random() * portfolioBios.length)];
-      this.setState({ loading: false, bio });
-    });
+    const bio = getBio();
+    this.setState({ loading: false, bio });
   }
 
   renderSpinner() {

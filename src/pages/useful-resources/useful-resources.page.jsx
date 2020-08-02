@@ -1,30 +1,26 @@
 import React from "react";
 import { UsefulResourceList } from "../../components/useful-resource-list/useful-resource-list.component";
 import { Card } from "antd";
-import {firestore, convertResourcesSnapshotToList} from '../../firebase/firebase-utils'
+import { getResources } from "../../data-stores/data-store-master-util";
 export class UsefulResources extends React.Component {
   constructor() {
     super();
     this.state = {
       resourceList: [],
-      loading:true
+      loading: true,
     };
   }
   componentDidMount() {
-    const portfolioResources = firestore.collection(
-      "portfolio_useful_resources"
-    );
-    portfolioResources.onSnapshot(async (snapshot) => {
-      const resourceList = convertResourcesSnapshotToList(
-        snapshot
-      );
-      this.setState({ loading: false, resourceList });
-    });
+    const resourceList = getResources();
+    this.setState({ resourceList, loading: false });
   }
   render() {
     return (
       <Card>
-        <UsefulResourceList loading={this.state.loading} resourceList={this.state.resourceList} />
+        <UsefulResourceList
+          loading={this.state.loading}
+          resourceList={this.state.resourceList}
+        />
       </Card>
     );
   }

@@ -10,7 +10,7 @@ const columns = [
   },
   {
     title: "Resource Description",
-    dataIndex: "desc",
+    dataIndex: "description",
     responsive: ["md"],
   },
   {
