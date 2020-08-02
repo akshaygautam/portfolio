@@ -126,7 +126,12 @@ class App extends React.Component {
             {this.state.headerOptions.map((item) => {
               return (
                 <Menu.Item key={item.id}>
-                  <Link key={item.id} to={item.link} className="option">
+                  <Link
+                    key={item.id}
+                    to={item.link}
+                    style={{ fontSize: "large" }}
+                    className="option"
+                  >
                     {item.title}
                   </Link>
                 </Menu.Item>
