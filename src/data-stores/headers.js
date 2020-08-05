@@ -6,7 +6,7 @@ export default [
   {
     id: 5,
     title: "Useful Resources",
-    active: false,
+    active: true,
     link: "/useful_resources",
   },
 ];
