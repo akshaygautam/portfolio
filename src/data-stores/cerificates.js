@@ -62,4 +62,13 @@ export default [
       "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2FhakrRank_jsbasic.jpg?alt=media&token=e9f89489-4df1-4f13-9622-9c12cfe4f952",
     siteURL: "https://www.hackerrank.com/certificates/a7ddcf1bd831",
   },
+  {
+      id: 8,
+      displayInfo: "Algorithmic Toolbox",
+      created: "2020/09/01",
+      active: true,
+      imageURL:
+        "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fdsa_1.png?alt=media&token=806c9378-446d-4184-ae4f-809443ac4514",
+      siteURL: "https://coursera.org/share/e90eead4d48d69e372049bccdd47c9c8",
+    },
 ];
