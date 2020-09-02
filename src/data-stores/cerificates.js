@@ -71,4 +71,13 @@ export default [
         "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fdsa_1.png?alt=media&token=806c9378-446d-4184-ae4f-809443ac4514",
       siteURL: "https://coursera.org/share/e90eead4d48d69e372049bccdd47c9c8",
     },
+    {
+       id: 9,
+       displayInfo: "Data Structures",
+       created: "2020/09/02",
+       active: true,
+       imageURL:
+         "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fdsa_2.png?alt=media&token=234b1e76-5ed4-4e97-b25e-f6875e1a3009",
+       siteURL: "https://coursera.org/share/c99d9cef12284d47e81d3b9d05fe7160",
+    },
 ];
