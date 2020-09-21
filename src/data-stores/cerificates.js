@@ -6,7 +6,7 @@ export default [
     active: true,
     imageURL:
       "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Foops_3.jpg?alt=media&token=d47c91e8-4fc4-4573-a636-d66534ba04f0",
-    siteURL: "https://coursera.org/share/c12656f9f3dc7fd5ee6335e1616b44f8",
+    siteURL: "https://www.coursera.org/account/accomplishments/certificate/3W8ND46R4JAT",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export default [
     active: true,
     imageURL:
       "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Foops_1.jpg?alt=media&token=4d720512-dfca-43c8-bfe1-b99a972f8b05",
-    siteURL: "https://coursera.org/share/b6fb4a56d4e0ba95ff46ef9470b6f1f9",
+    siteURL: "https://www.coursera.org/account/accomplishments/certificate/C6Q9795KMB74",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export default [
     active: true,
     imageURL:
       "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Foops_2.jpg?alt=media&token=9c73bc63-54d2-41ab-b97d-299ae70bff38",
-    siteURL: "https://coursera.org/share/bd69b718f3e328fce4c9d7a40a26f31e",
+    siteURL: "https://www.coursera.org/account/accomplishments/certificate/VNGDFFRLLHZK",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export default [
     active: true,
     imageURL:
       "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Foops_4.jpg?alt=media&token=be782e26-6c3c-4090-9df3-72e33b66f26e",
-    siteURL: "https://coursera.org/share/9319de4146b46a2df4b16e44ccb18235",
+    siteURL: "https://www.coursera.org/account/accomplishments/certificate/ZVTUFQM9J4CH",
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ export default [
     active: true,
     imageURL:
       "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fgcp_1.jpg?alt=media&token=c09bfe2e-9556-45ef-a34e-3b0073202ac1",
-    siteURL: "https://coursera.org/share/ab0445653b08f51fdc7b4281a6617872",
+    siteURL: "https://www.coursera.org/account/accomplishments/certificate/WGZPRDR4YRPY",
   },
   {
     id: 6,
@@ -69,7 +69,7 @@ export default [
       active: true,
       imageURL:
         "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fdsa_1.png?alt=media&token=806c9378-446d-4184-ae4f-809443ac4514",
-      siteURL: "https://coursera.org/share/e90eead4d48d69e372049bccdd47c9c8",
+      siteURL: "https://www.coursera.org/account/accomplishments/certificate/EUSGDYCZHTR7",
     },
     {
        id: 9,
@@ -78,6 +78,6 @@ export default [
        active: true,
        imageURL:
          "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fdsa_2.png?alt=media&token=234b1e76-5ed4-4e97-b25e-f6875e1a3009",
-       siteURL: "https://coursera.org/share/c99d9cef12284d47e81d3b9d05fe7160",
+       siteURL: "https://www.coursera.org/account/accomplishments/certificate/FW3T4BGMDYAP",
     },
 ];

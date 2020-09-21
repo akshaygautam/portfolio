@@ -46,7 +46,7 @@ export const SocialBand = ({
             <FilePdfOutlined />
           </Tooltip>
         </a>
-        <a href="mailto:akshay.gautam2209@gmail.com" style={iconStyle}>
+        <a href="mailto:akshaygautamofficial@gmail.com" style={iconStyle}>
           <Tooltip placement={tooltipPlacement} title="Email">
             <MailOutlined />
           </Tooltip>
