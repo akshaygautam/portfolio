@@ -80,4 +80,14 @@ export default [
          "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fdsa_2.png?alt=media&token=234b1e76-5ed4-4e97-b25e-f6875e1a3009",
        siteURL: "https://www.coursera.org/account/accomplishments/certificate/FW3T4BGMDYAP",
     },
+    {
+       id: 10,
+       displayInfo: "Algorithms On Graphs",
+       created: "2020/09/29",
+       active: true,
+       imageURL:
+         "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fdsa_1.png?alt=media&token=806c9378-446d-4184-ae4f-809443ac4514",
+       siteURL: "https://www.coursera.org/account/accomplishments/certificate/UCVLSD83UGZT",
+    },
+
 ];
