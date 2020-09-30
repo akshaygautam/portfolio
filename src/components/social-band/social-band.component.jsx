@@ -22,7 +22,7 @@ export const SocialBand = ({
           rel="noopener noreferrer"
           style={iconStyle}
         >
-          <Tooltip placement={tooltipPlacement} title="LikedIn">
+          <Tooltip placement={tooltipPlacement} title="LinkedIn">
             <LinkedinOutlined />
           </Tooltip>
         </a>
