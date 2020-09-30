@@ -11,7 +11,7 @@ export const getDemoProject = () => {
 };
 
 export const getBio = () => {
-  return bio[0];
+  return bio
 };
 
 function arraySort(arr, key) {
