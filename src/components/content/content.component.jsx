@@ -15,8 +15,6 @@ export const Content = ({
         gradientClassName="certificate-gradient"
         title="Certifications"
         portfolioContentList={portfolioCertificationList}
-        showItems="3"
-        link="/certifications"
         showMore={true}
       />
     ) : null;
@@ -28,9 +26,6 @@ export const Content = ({
         gradientClassName="demo-project-gradient"
         title="Demo Projects"
         portfolioContentList={portfolioDemoProjectList}
-        showItems="3"
-        link="/demo_projects"
-        showMore={true}
       />
     ) : null;
   };

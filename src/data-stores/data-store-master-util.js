@@ -1,12 +1,6 @@
-import headers from "./headers";
 import certificates from "./cerificates";
 import demoProjects from "./demoProjects";
 import bio from "./bio";
-import resources from "./resources";
-
-export const getHeaders = () => {
-  return filterActiveData(headers);
-};
 
 export const getCertificates = () => {
   return arraySort(filterActiveData(certificates), "date");
@@ -18,10 +12,6 @@ export const getDemoProject = () => {
 
 export const getBio = () => {
   return bio[0];
-};
-
-export const getResources = () => {
-  return arraySort(resources, "date");
 };
 
 function arraySort(arr, key) {

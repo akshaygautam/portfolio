@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 import { Layout, Spin, Menu, BackTop } from "antd";
 import {
-  getHeaders,
   getCertificates,
   getDemoProject,
   getBio,
@@ -11,12 +10,7 @@ import { Content as MyContent } from "./components/content/content.component";
 import { Footer as MyFooter } from "./components/footer/footer.component";
 import { Loading3QuartersOutlined } from "@ant-design/icons";
 import { Route, Switch, withRouter } from "react-router";
-import { BlogsPage } from "./pages/blogs/blogs.page";
-import { CertificationsPage } from "./pages/certifications/certifications.page";
 import { Link } from "react-router-dom";
-import { DemoProjectsPage } from "./pages/demo-projects/demo-projects.page";
-import { UsefulResources } from "./pages/useful-resources/useful-resources.page";
-import { ContactPage } from "./pages/contact/contact.page";
 import Avatar from "antd/lib/avatar/avatar";
 
 const antIcon = <Loading3QuartersOutlined style={{ fontSize: 24 }} spin />;
@@ -39,10 +33,7 @@ class App extends React.Component {
 
     const portfolioDemoProjectList = getDemoProject();
     this.setState({ portfolioDemoProjectList });
-
-    const headerOptions = getHeaders();
-    this.setState({ headerOptions });
-
+    
     const bio = getBio();
     this.setState({ loading: false, bio });
   }
@@ -66,34 +57,10 @@ class App extends React.Component {
     );
   };
 
-  renderCertificationsPage = () => {
-    return (
-      <CertificationsPage
-        portfolioCertificationList={this.state.portfolioCertificationList}
-      />
-    );
-  };
-
-  renderDemoProjectsPage = () => {
-    return (
-      <DemoProjectsPage
-        portfolioDemoProjectList={this.state.portfolioDemoProjectList}
-      />
-    );
-  };
-
   renderContent = () => {
     return (
       <Switch>
         <Route path="/portfolio" render={this.renderHomePage} />
-        <Route path="/blogs" component={BlogsPage} />
-        <Route
-          path="/certifications"
-          component={this.renderCertificationsPage}
-        />
-        <Route path="/demo_projects" component={this.renderDemoProjectsPage} />
-        <Route path="/useful_resources" component={UsefulResources} />
-        <Route path="/contact" component={ContactPage} />
       </Switch>
     );
   };

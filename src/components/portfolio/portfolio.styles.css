@@ -4,6 +4,7 @@
   backface-visibility: hidden;
   transform: translateZ(0);
   transition: transform 0.25s ease-out;
+  padding: 8px 0;
 }
 
 .portfolio-container:hover {
