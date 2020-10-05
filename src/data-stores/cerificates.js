@@ -98,5 +98,14 @@ export default [
          "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fhacker%20rank%20sql%20basix.png?alt=media&token=10803093-cf72-486a-a4e9-0f1f42c4c059",
          siteURL: "https://www.hackerrank.com/certificates/b23ea8cc6d55",
     },
+    {
+       id: 12,
+       displayInfo: "Getting Started With Application Development",
+       created: "2020/10/05",
+       active: true,
+       imageURL:
+         "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fgcp_2.png?alt=media&token=bed5673d-4f2c-4414-b2a3-9348c10e80fc",
+          siteURL: "https://www.coursera.org/account/accomplishments/certificate/9TN3Y6XZDR9T",
+    },
 
 ];
