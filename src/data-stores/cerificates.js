@@ -89,5 +89,14 @@ export default [
          "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fdsa_1.png?alt=media&token=806c9378-446d-4184-ae4f-809443ac4514",
        siteURL: "https://www.coursera.org/account/accomplishments/certificate/UCVLSD83UGZT",
     },
+    {
+       id: 11,
+       displayInfo: "SQL Basic",
+       created: "2020/09/15",
+       active: true,
+       imageURL:
+         "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fhacker%20rank%20sql%20basix.png?alt=media&token=10803093-cf72-486a-a4e9-0f1f42c4c059",
+         siteURL: "https://www.hackerrank.com/certificates/b23ea8cc6d55",
+    },
 
 ];
