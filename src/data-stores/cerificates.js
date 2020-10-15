@@ -107,5 +107,22 @@ export default [
          "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fgcp_2.png?alt=media&token=bed5673d-4f2c-4414-b2a3-9348c10e80fc",
           siteURL: "https://www.coursera.org/account/accomplishments/certificate/9TN3Y6XZDR9T",
     },
-
+    {
+       id: 13,
+       displayInfo: "Securing and Integrating Components of your Application",
+       created: "2020/10/15",
+       active: true,
+       imageURL:
+         "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fgcp_3.png?alt=media&token=54497ecb-5382-4bfe-877b-a253126d0df7",
+         siteURL: "https://www.coursera.org/account/accomplishments/certificate/N8WVQ6PA3D8M",
+    },
+    {
+       id: 14,
+       displayInfo: "Software Design and Architecture",
+       created: "2020/02/07",
+       active: true,
+       imageURL:
+         "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Foops_0.png?alt=media&token=936d7ed5-494f-4e20-a4b2-8c9939393318",
+          siteURL: "https://www.coursera.org/account/accomplishments/specialization/certificate/BP7RFCCZPADB",
+    },
 ];
