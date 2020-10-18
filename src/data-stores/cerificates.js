@@ -86,8 +86,8 @@ export default [
        created: "2020/09/29",
        active: true,
        imageURL:
-         "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fdsa_1.png?alt=media&token=806c9378-446d-4184-ae4f-809443ac4514",
-       siteURL: "https://www.coursera.org/account/accomplishments/certificate/UCVLSD83UGZT",
+         "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fdsa_3.png?alt=media&token=abc4c3e7-004a-4ca4-80ea-a7084570a353",
+         siteURL: "https://www.coursera.org/account/accomplishments/certificate/UCVLSD83UGZT",
     },
     {
        id: 11,
@@ -118,11 +118,30 @@ export default [
     },
     {
        id: 14,
-       displayInfo: "Software Design and Architecture",
-       created: "2020/02/07",
+       displayInfo: "Software Design and Architecture Specialization",
+       created: "2020/02/07 00:01",
        active: true,
        imageURL:
          "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Foops_0.png?alt=media&token=936d7ed5-494f-4e20-a4b2-8c9939393318",
           siteURL: "https://www.coursera.org/account/accomplishments/specialization/certificate/BP7RFCCZPADB",
     },
+    {
+       id: 15,
+       displayInfo: "App Deployment, Debugging, and Performance",
+       created: "2020/10/18",
+       active: true,
+       imageURL:
+         "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fgcp_4.png?alt=media&token=cfa74723-82ac-4f14-a788-2fb01dcd46e3",
+         siteURL: "https://www.coursera.org/account/accomplishments/certificate/LZ4AJXBNEBM9",
+    },
+    {
+       id: 16,
+       displayInfo: "Developing Applications with Google Cloud Platform Specialization",
+       created: "2020/10/18 00:01",
+       active: true,
+       imageURL:
+         "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fgcp_5.png?alt=media&token=a6d07d04-fe90-4022-b776-6045144222ef",
+         siteURL: "https://www.coursera.org/account/accomplishments/specialization/certificate/X4WQ9S2X83BN",
+    },
+
 ];
