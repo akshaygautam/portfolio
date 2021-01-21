@@ -143,5 +143,14 @@ export default [
          "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fgcp_5.png?alt=media&token=a6d07d04-fe90-4022-b776-6045144222ef",
          siteURL: "https://www.coursera.org/account/accomplishments/specialization/certificate/X4WQ9S2X83BN",
     },
+    {
+      id: 17,
+      displayInfo: "Special Award For Fareye Loupe- Fareye Hackathon (DEC-2020)",
+      created: "2021/01/20 00:01",
+      active: true,
+      imageURL:
+        "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2FHackathon%20Special%20Award%20Certificate%20-%20Akshay%20Gautam%20.png?alt=media&token=a31323c8-f32d-438f-b7ec-3f6ceb274763",
+      siteURL: "https://akshaygautam.github.io/portfolio/",
+   },
 
 ];
