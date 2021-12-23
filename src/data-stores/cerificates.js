@@ -152,5 +152,14 @@ export default [
         "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2FHackathon%20Special%20Award%20Certificate%20-%20Akshay%20Gautam%20.png?alt=media&token=a31323c8-f32d-438f-b7ec-3f6ceb274763",
       siteURL: "https://akshaygautam.github.io/portfolio/",
    },
+   {
+    id: 18,
+    displayInfo: "Blockchain A-Z™: Learn How To Build Your First Blockchain",
+    created: "2021/12/23 00:01",
+    active: true,
+    imageURL:
+      "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fblock_chain_a2z.jpg?alt=media&token=748cf92d-5757-49bf-b6cb-ef3df4074613",
+    siteURL: "https://akshaygautam.github.io/portfolio/",
+ },
 
 ];

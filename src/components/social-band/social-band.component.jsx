@@ -5,6 +5,7 @@ import {
   FilePdfOutlined,
   GithubOutlined,
   LinkedinOutlined,
+  YoutubeFilled,
 } from "@ant-design/icons";
 export const SocialBand = ({
   text,
@@ -49,6 +50,11 @@ export const SocialBand = ({
         <a href="mailto:akshaygautamofficial@gmail.com" style={iconStyle}>
           <Tooltip placement={tooltipPlacement} title="Email">
             <MailOutlined />
+          </Tooltip>
+        </a>
+        <a href="https://www.youtube.com/channel/UC_t8fjPij3zCHbNIgWfPPHg" style={iconStyle}>
+          <Tooltip placement={tooltipPlacement} title="YouTube">
+            <YoutubeFilled />
           </Tooltip>
         </a>
       </div>
