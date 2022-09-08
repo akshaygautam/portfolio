@@ -161,5 +161,14 @@ export default [
       "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fblock_chain_a2z.jpg?alt=media&token=748cf92d-5757-49bf-b6cb-ef3df4074613",
     siteURL: "https://akshaygautam.github.io/portfolio/",
  },
+ {
+  id: 19,
+  displayInfo: "Microsoft Certified: Azure Fundamentals (AZ-900)",
+  created: "2022/09/08 00:01",
+  active: true,
+  imageURL:
+    " https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2FAz-900.jpg?alt=media&token=bcd283a8-f31d-4093-8e82-c0d9d6a680da",
+  siteURL: "https://akshaygautam.github.io/portfolio/",
+},
 
 ];
