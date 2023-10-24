@@ -17,26 +17,8 @@ export const Bio = ({ bio }) => {
         </Col>
         <Col className="gutter-row" xs={24} sm={24} md={10} lg={10} xl={10} xxl={10}>
           <h1>{intro}</h1>
-          {/* <ReactTypingEffect cursor="_" className="lead" text={subIntro} /> */}
-          <div className="portfolio-container">
-            {content.map((item) => (
-              <div className="portfolio-item" key={item.title}>
-                <h3 className="portfolio-title">{item.title}</h3>
-                {typeof item.content === 'string' ? (
-                  <p className="portfolio-content">{item.content}</p>
-                ) : (
-                  // If the content is an object (like portfolio_highlights), map over it
-                  <ul className="portfolio-list">
-                    {Object.entries(item.content).map(([key, value]) => (
-                      <li className="portfolio-list-item" key={key}>
-                        <strong>{key}</strong>: {value}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ))}
-          </div>
+          <ReactTypingEffect cursor="_" className="lead" text={subIntro} />
+          <div id="demo">{content}</div>
           <SocialBand
             text="Know more"
             textStyle={{
