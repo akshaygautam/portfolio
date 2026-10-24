@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import "./App.css";
 import { Layout, Spin, Menu, FloatButton, Avatar } from "antd";
-import { getCertificates, getDemoProject, getBio } from "./data-stores/data-store-master-util";
+import { getCertificates, getBio } from "./data-stores/data-store-master-util";
 import { Content as MyContent } from "./components/content/content.component";
 import { Footer as MyFooter } from "./components/footer/footer.component";
 import { Loading3QuartersOutlined } from "@ant-design/icons";
@@ -14,7 +14,6 @@ const App = () => {
   const location = useLocation();
   const [loading, setLoading] = useState(true);
   const [portfolioCertificationList, setPortfolioCertificationList] = useState([]);
-  const [portfolioDemoProjectList, setPortfolioDemoProjectList] = useState([]);
   const [bio, setBio] = useState(null);
 
   const headerOptions = useMemo(
@@ -24,7 +23,6 @@ const App = () => {
 
   useEffect(() => {
     setPortfolioCertificationList(getCertificates());
-    setPortfolioDemoProjectList(getDemoProject());
     setBio(getBio());
     setLoading(false);
   }, []);
@@ -40,7 +38,6 @@ const App = () => {
     return (
       <MyContent
         portfolioCertificationList={portfolioCertificationList}
-        portfolioDemoProjectList={portfolioDemoProjectList}
         bio={bio}
       />
     );

@@ -4,8 +4,10 @@ export default [
     displayInfo: "Software Architecture",
     created: "2020/01/18",
     active: true,
+    category: "Software design",
+    platform: "Coursera",
     imageURL:
-      "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Foops_3.jpg?alt=media&token=d47c91e8-4fc4-4573-a636-d66534ba04f0",
+      `${import.meta.env.BASE_URL}assets/certificates/oops_3.jpg`,
     siteURL: "https://www.coursera.org/account/accomplishments/certificate/3W8ND46R4JAT",
   },
   {
@@ -13,8 +15,10 @@ export default [
     displayInfo: "Object-Oriented Design",
     created: "2019/11/18",
     active: true,
+    category: "Software design",
+    platform: "Coursera",
     imageURL:
-      "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Foops_1.jpg?alt=media&token=4d720512-dfca-43c8-bfe1-b99a972f8b05",
+      `${import.meta.env.BASE_URL}assets/certificates/oops_1.jpg`,
     siteURL: "https://www.coursera.org/account/accomplishments/certificate/C6Q9795KMB74",
   },
   {
@@ -22,8 +26,10 @@ export default [
     displayInfo: "Design Patterns",
     created: "2020/01/02",
     active: true,
+    category: "Software design",
+    platform: "Coursera",
     imageURL:
-      "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Foops_2.jpg?alt=media&token=9c73bc63-54d2-41ab-b97d-299ae70bff38",
+      `${import.meta.env.BASE_URL}assets/certificates/oops_2.jpg`,
     siteURL: "https://www.coursera.org/account/accomplishments/certificate/VNGDFFRLLHZK",
   },
   {
@@ -31,8 +37,10 @@ export default [
     displayInfo: "Service-Oriented Architecture",
     created: "2020/02/07",
     active: true,
+    category: "Software design",
+    platform: "Coursera",
     imageURL:
-      "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Foops_4.jpg?alt=media&token=be782e26-6c3c-4090-9df3-72e33b66f26e",
+      `${import.meta.env.BASE_URL}assets/certificates/oops_4.jpg`,
     siteURL: "https://www.coursera.org/account/accomplishments/certificate/ZVTUFQM9J4CH",
   },
   {
@@ -40,8 +48,10 @@ export default [
     displayInfo: "Google Cloud Platform Fundamentals",
     created: "2019/11/30",
     active: true,
+    category: "Google Cloud",
+    platform: "Coursera",
     imageURL:
-      "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fgcp_1.jpg?alt=media&token=c09bfe2e-9556-45ef-a34e-3b0073202ac1",
+      `${import.meta.env.BASE_URL}assets/certificates/gcp_1.jpg`,
     siteURL: "https://www.coursera.org/account/accomplishments/certificate/WGZPRDR4YRPY",
   },
   {
@@ -49,8 +59,10 @@ export default [
     displayInfo: "Java Basics",
     created: "2020/07/29",
     active: true,
+    category: "Programming",
+    platform: "HackerRank",
     imageURL:
-      "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2FhakrRank%20java%20basic.jpg?alt=media&token=27285a31-0e70-446d-be5f-5333f3266134",
+      `${import.meta.env.BASE_URL}assets/certificates/hakrRank java basic.jpg`,
     siteURL: "https://www.hackerrank.com/certificates/ec74da9d1d74",
   },
   {
@@ -58,8 +70,10 @@ export default [
     displayInfo: "Java Script Basics",
     created: "2020/07/29",
     active: true,
+    category: "Programming",
+    platform: "HackerRank",
     imageURL:
-      "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2FhakrRank_jsbasic.jpg?alt=media&token=e9f89489-4df1-4f13-9622-9c12cfe4f952",
+      `${import.meta.env.BASE_URL}assets/certificates/hakrRank_jsbasic.jpg`,
     siteURL: "https://www.hackerrank.com/certificates/a7ddcf1bd831",
   },
   {
@@ -67,8 +81,10 @@ export default [
       displayInfo: "Algorithmic Toolbox",
       created: "2020/09/01",
       active: true,
+      category: "Algorithms & data structures",
+      platform: "Coursera",
       imageURL:
-        "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fdsa_1.png?alt=media&token=806c9378-446d-4184-ae4f-809443ac4514",
+        `${import.meta.env.BASE_URL}assets/certificates/dsa_1.png`,
       siteURL: "https://www.coursera.org/account/accomplishments/certificate/EUSGDYCZHTR7",
     },
     {
@@ -76,8 +92,10 @@ export default [
        displayInfo: "Data Structures",
        created: "2020/09/02",
        active: true,
+       category: "Algorithms & data structures",
+       platform: "Coursera",
        imageURL:
-         "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fdsa_2.png?alt=media&token=234b1e76-5ed4-4e97-b25e-f6875e1a3009",
+         `${import.meta.env.BASE_URL}assets/certificates/dsa_2.png`,
        siteURL: "https://www.coursera.org/account/accomplishments/certificate/FW3T4BGMDYAP",
     },
     {
@@ -85,8 +103,10 @@ export default [
        displayInfo: "Algorithms On Graphs",
        created: "2020/09/29",
        active: true,
+       category: "Algorithms & data structures",
+       platform: "Coursera",
        imageURL:
-         "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fdsa_3.png?alt=media&token=abc4c3e7-004a-4ca4-80ea-a7084570a353",
+         `${import.meta.env.BASE_URL}assets/certificates/dsa_3.png`,
          siteURL: "https://www.coursera.org/account/accomplishments/certificate/UCVLSD83UGZT",
     },
     {
@@ -94,8 +114,10 @@ export default [
        displayInfo: "SQL Basic",
        created: "2020/09/15",
        active: true,
+       category: "Programming",
+       platform: "HackerRank",
        imageURL:
-         "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fhacker%20rank%20sql%20basix.png?alt=media&token=10803093-cf72-486a-a4e9-0f1f42c4c059",
+         `${import.meta.env.BASE_URL}assets/certificates/hacker rank sql basix.png`,
          siteURL: "https://www.hackerrank.com/certificates/b23ea8cc6d55",
     },
     {
@@ -103,8 +125,10 @@ export default [
        displayInfo: "Getting Started With Application Development",
        created: "2020/10/05",
        active: true,
+       category: "Google Cloud",
+       platform: "Coursera",
        imageURL:
-         "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fgcp_2.png?alt=media&token=bed5673d-4f2c-4414-b2a3-9348c10e80fc",
+         `${import.meta.env.BASE_URL}assets/certificates/gcp_2.png`,
           siteURL: "https://www.coursera.org/account/accomplishments/certificate/9TN3Y6XZDR9T",
     },
     {
@@ -112,8 +136,10 @@ export default [
        displayInfo: "Securing and Integrating Components of your Application",
        created: "2020/10/15",
        active: true,
+       category: "Google Cloud",
+       platform: "Coursera",
        imageURL:
-         "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fgcp_3.png?alt=media&token=54497ecb-5382-4bfe-877b-a253126d0df7",
+         `${import.meta.env.BASE_URL}assets/certificates/gcp_3.png`,
          siteURL: "https://www.coursera.org/account/accomplishments/certificate/N8WVQ6PA3D8M",
     },
     {
@@ -121,8 +147,11 @@ export default [
        displayInfo: "Software Design and Architecture Specialization",
        created: "2020/02/07 00:01",
        active: true,
+       category: "Software design",
+       platform: "Coursera",
+       featured: true,
        imageURL:
-         "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Foops_0.png?alt=media&token=936d7ed5-494f-4e20-a4b2-8c9939393318",
+         `${import.meta.env.BASE_URL}assets/certificates/oops_0.png`,
           siteURL: "https://www.coursera.org/account/accomplishments/specialization/certificate/BP7RFCCZPADB",
     },
     {
@@ -130,8 +159,10 @@ export default [
        displayInfo: "App Deployment, Debugging, and Performance",
        created: "2020/10/18",
        active: true,
+       category: "Google Cloud",
+       platform: "Coursera",
        imageURL:
-         "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fgcp_4.png?alt=media&token=cfa74723-82ac-4f14-a788-2fb01dcd46e3",
+         `${import.meta.env.BASE_URL}assets/certificates/gcp_4.png`,
          siteURL: "https://www.coursera.org/account/accomplishments/certificate/LZ4AJXBNEBM9",
     },
     {
@@ -139,8 +170,11 @@ export default [
        displayInfo: "Developing Applications with Google Cloud Platform Specialization",
        created: "2020/10/18 00:01",
        active: true,
+       category: "Google Cloud",
+       platform: "Coursera",
+       featured: true,
        imageURL:
-         "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fgcp_5.png?alt=media&token=a6d07d04-fe90-4022-b776-6045144222ef",
+         `${import.meta.env.BASE_URL}assets/certificates/gcp_5.png`,
          siteURL: "https://www.coursera.org/account/accomplishments/specialization/certificate/X4WQ9S2X83BN",
     },
     {
@@ -148,8 +182,10 @@ export default [
       displayInfo: "Special Award For Fareye Loupe- Fareye Hackathon (DEC-2020)",
       created: "2021/01/20 00:01",
       active: true,
+      category: "Recognition",
+      issuer: "Fareye",
       imageURL:
-        "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2FHackathon%20Special%20Award%20Certificate%20-%20Akshay%20Gautam%20.png?alt=media&token=a31323c8-f32d-438f-b7ec-3f6ceb274763",
+        `${import.meta.env.BASE_URL}assets/certificates/Hackathon Special Award Certificate - Akshay Gautam .png`,
       siteURL: "https://akshaygautam.github.io/portfolio/",
    },
    {
@@ -157,8 +193,9 @@ export default [
     displayInfo: "Blockchain A-Z™: Learn How To Build Your First Blockchain",
     created: "2021/12/23 00:01",
     active: true,
+    category: "Professional development",
     imageURL:
-      "https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2Fblock_chain_a2z.jpg?alt=media&token=748cf92d-5757-49bf-b6cb-ef3df4074613",
+      `${import.meta.env.BASE_URL}assets/certificates/block_chain_a2z.jpg`,
     siteURL: "https://akshaygautam.github.io/portfolio/",
  },
  {
@@ -166,8 +203,11 @@ export default [
   displayInfo: "Microsoft Certified: Azure Fundamentals (AZ-900)",
   created: "2022/09/08 00:01",
   active: true,
+  category: "Cloud certification",
+  issuer: "Microsoft",
+  featured: true,
   imageURL:
-    " https://firebasestorage.googleapis.com/v0/b/crown-db-a0e18.appspot.com/o/portfolio%2Fcertificate-images%2FAz-900.jpg?alt=media&token=bcd283a8-f31d-4093-8e82-c0d9d6a680da",
+    `${import.meta.env.BASE_URL}assets/certificates/Az-900.jpg`,
   siteURL: "https://akshaygautam.github.io/portfolio/",
 },
 

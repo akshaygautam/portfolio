@@ -14,10 +14,14 @@ export const SocialBand = ({
   tooltipPlacement,
 }) => {
   return (
-    <div className="row" style={{ marginLeft: "10px" }}>
-      <div className="col-md-* col-xs-*">
-        <p style={textStyle}>{text}</p>
+    <div className="social-band">
+      <p className="social-band-label" style={textStyle}>
+        {text}
+      </p>
+      <div className="social-band-links">
         <a
+          className="social-band-link"
+          aria-label="LinkedIn"
           href="https://www.linkedin.com/in/akshay-gautam-74577a117/"
           target="_blank"
           rel="noopener noreferrer"
@@ -28,6 +32,8 @@ export const SocialBand = ({
           </Tooltip>
         </a>
         <a
+          className="social-band-link"
+          aria-label="GitHub"
           href="https://github.com/akshaygautam"
           target="_blank"
           rel="noopener noreferrer"
@@ -47,12 +53,22 @@ export const SocialBand = ({
             <FilePdfOutlined />
           </Tooltip>
         </a> */}
-        <a href="mailto:akshaygautamofficial@gmail.com" style={iconStyle}>
+        <a
+          className="social-band-link"
+          aria-label="Email"
+          href="mailto:akshaygautamofficial@gmail.com"
+          style={iconStyle}
+        >
           <Tooltip placement={tooltipPlacement} title="Email">
             <MailOutlined />
           </Tooltip>
         </a>
-        <a href="https://www.youtube.com/channel/UC_t8fjPij3zCHbNIgWfPPHg" style={iconStyle}>
+        <a
+          className="social-band-link"
+          aria-label="YouTube"
+          href="https://www.youtube.com/channel/UC_t8fjPij3zCHbNIgWfPPHg"
+          style={iconStyle}
+        >
           <Tooltip placement={tooltipPlacement} title="YouTube">
             <YoutubeFilled />
           </Tooltip>

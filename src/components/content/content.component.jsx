@@ -4,24 +4,12 @@ import { PortfolioList } from "../portfolio-list/portfolio-list.component";
 import { Bio } from "../bio/bio.component";
 import { Space } from "antd";
 
-export const Content = ({ portfolioCertificationList, portfolioDemoProjectList, bio }) => {
+export const Content = ({ portfolioCertificationList, bio }) => {
   const renderCertifiacations = () => {
     return portfolioCertificationList && portfolioCertificationList.length > 0 ? (
       <PortfolioList
-        gradientClassName="certificate-gradient"
-        title="Certifications"
+        title="Credentials"
         portfolioContentList={portfolioCertificationList}
-        showMore={true}
-      />
-    ) : null;
-  };
-
-  const renderDemoProjectList = () => {
-    return portfolioDemoProjectList && portfolioDemoProjectList.length > 0 ? (
-      <PortfolioList
-        gradientClassName="demo-project-gradient"
-        title="Demo Projects"
-        portfolioContentList={portfolioDemoProjectList}
       />
     ) : null;
   };
@@ -29,8 +17,12 @@ export const Content = ({ portfolioCertificationList, portfolioDemoProjectList, 
   return (
     <Space size="middle" orientation="vertical">
       <Bio bio={bio} />
+      {portfolioCertificationList?.length > 0 && (
+        <div className="content-transition" aria-hidden="true">
+          <span>Selected milestones</span>
+        </div>
+      )}
       {renderCertifiacations()}
-      {renderDemoProjectList()}
     </Space>
   );
 };

@@ -5,34 +5,51 @@ import { SocialBand } from "../social-band/social-band.component";
 import { TimeLine } from "../timeline/timeline.component";
 
 export const Bio = ({ bio }) => {
-  const { imageURL, content, intro, subIntro } = bio[0];
+  const { imageURL, content, intro, subIntro, interests } = bio[0];
 
   return (
     <Card className="bio">
-      <Row gutter={[{ xs: 4, sm: 4, md: 24, lg: 32 }, { xs: 4, sm: 4, md: 24, lg: 24 }]}>
-        <Col className="gutter-row" xs={24} sm={24} md={6} lg={6} xl={6} xxl={6}>
-          <img className="img-responsive img-thumbnail" src={imageURL} alt="me.jpg" />
+      <Row
+        className="bio-row"
+        gutter={[{ xs: 16, sm: 20, md: 24, lg: 32 }, { xs: 28, sm: 28, md: 24, lg: 24 }]}
+      >
+        <Col
+          className="gutter-row bio-intro-column"
+          xs={24}
+          sm={24}
+          md={16}
+          lg={16}
+          xl={16}
+          xxl={16}
+        >
+          <div className="bio-intro">
+            <span className="bio-eyebrow">A little about me</span>
+            <h1>{intro}</h1>
+            <div className="bio-role">
+              <span className="bio-role-mark" aria-hidden="true" />
+              {subIntro}
+            </div>
+            {imageURL && (
+              <div className="bio-portrait-frame">
+                <img className="bio-portrait" src={imageURL} alt="Akshay Gautam" />
+              </div>
+            )}
+            <p className="bio-description">{content}</p>
+            <div className="bio-interests">
+              <span className="bio-interests-label">Away from the keyboard</span>
+              <ul aria-label="Personal interests">
+                {interests.map((interest) => (
+                  <li key={interest}>{interest}</li>
+                ))}
+              </ul>
+            </div>
+            <SocialBand text="Know more" tooltipPlacement="bottom" />
+          </div>
         </Col>
 
-        <Col className="gutter-row" xs={24} sm={24} md={10} lg={10} xl={10} xxl={10}>
-          <h1>{intro}</h1>
-          <div className="lead">{subIntro}</div>
-          <div id="demo">{content}</div>
-          <SocialBand
-            text="Know more"
-            textStyle={{
-              margin: "10px",
-              color: "white",
-              fontSize: "x-large",
-            }}
-            iconStyle={{ color: "white", margin: "5px", fontSize: "30px" }}
-            tooltipPlacement="bottom"
-          />
-        </Col>
-
-        <Col className="gutter-row" xs={24} sm={24} md={8} lg={8} xl={8} xxl={8}>
-          <TimeLine title={"Work XP"} timeLine={bio[1].professionalTimeLine} />
-          <TimeLine title={"Education"} timeLine={bio[1].educationTimeLine} />
+        <Col className="gutter-row bio-timeline-column" xs={24} sm={24} md={8} lg={8} xl={8} xxl={8}>
+          <TimeLine title="Work Experience" timeLine={bio[1].professionalTimeLine} />
+          <TimeLine title="Education" timeLine={bio[1].educationTimeLine} />
         </Col>
       </Row>
     </Card>
