@@ -3,19 +3,42 @@
   -moz-osx-font-smoothing: grayscale;
   backface-visibility: hidden;
   transform: translateZ(0);
-  transition: transform 0.25s ease-out;
-  padding: 8px 0;
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+  padding: 12px 0;
+  border-radius: 18px;
 }
 
 .portfolio-container:hover {
-  transform: scale(1.05);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 35px rgba(30, 58, 95, 0.14);
 }
 
 .portfolio-image {
-  height: auto;
+  height: 200px;
   width: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 28px rgba(30, 58, 95, 0.12);
 }
 
 .portfolio-display-info {
-  color: white;
+  color: var(--text);
+  padding: 12px 4px 0;
+}
+
+.portfolio-display-info h3,
+.portfolio-display-info p {
+  margin: 0;
+}
+
+.portfolio-display-info h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.portfolio-display-info p {
+  color: var(--muted);
+  line-height: 1.7;
 }

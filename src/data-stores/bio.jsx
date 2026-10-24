@@ -10,11 +10,12 @@ export default [
   {
     educationTimeLine: [
       { color: "red", label: "MRIU", desc: "B.tech(2013-2017)" },
-      { color: "red", label: "Ramjas No.1", desc: "12th(2012)" },
+      { color: "red", label: "Ramjas School", desc: "12th(2012)" },
       { color: "red", label: "Loyal Public School", desc: "10th(2010)" },
     ],
     professionalTimeLine: [
-      { color: "green", label: "Microsoft", desc: "(Aug-21)", image:"https://www.pngfind.com/pngs/m/201-2019045_microsoft-logo-germany-microsoft-logo-white-png-1024377.png"},
+      { color: "green", label: "Google", desc: "(Sep-25 - Present)" },
+      { color: "red", label: "Microsoft", desc: "(Aug-21 - Aug-25)", image:"https://www.pngfind.com/pngs/m/201-2019045_microsoft-logo-germany-microsoft-logo-white-png-1024377.png"},
       { color: "red", label: "Fareye", desc: "(Apr-19 - Aug-21)", image:"https://democracynewslive.com/content/servlet/RDESController?command=rdm.Picture&sessionId=RDWEBEU6JJ1LXBOAIFEP56KMKUQU6A9L4LZST&app=rdes&partner=democracynews&type=7&uid=XrDGpAHmJ3j7zlL7ZorwDi56ehto5bnD8744612" },
       { color: "red", label: "G4S IT Services", desc: "(Feb-17 - Mar-19)", image:"https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/G4S_%28logo%29.svg/1200px-G4S_%28logo%29.svg.png"}
     ]

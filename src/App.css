@@ -1,13 +1,83 @@
-body {
-  font-family: "Pacifico", cursive;
+.App {
+  min-height: 100vh;
+  background: transparent;
 }
 
 * {
   box-sizing: border-box;
 }
 
+.layout {
+  min-height: 100vh;
+  background: transparent;
+}
+
+.ant-layout-header {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(30, 58, 95, 0.08);
+}
+
+.ant-layout-header .ant-menu {
+  background: transparent;
+  border-bottom: none;
+  line-height: 64px;
+}
+
+.ant-layout-header .ant-menu-item {
+  color: var(--muted);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-bottom: 2px solid transparent !important;
+}
+
+.ant-layout-header .ant-menu-item:hover,
+.ant-layout-header .ant-menu-item-selected {
+  background: rgba(29, 78, 216, 0.08) !important;
+  border-bottom-color: var(--secondary) !important;
+}
+
+.option {
+  color: var(--text) !important;
+  font-size: 1rem;
+}
+
 .logo {
-  width: 50px;
-  height: 50px;
+  width: 56px;
+  height: 56px;
   float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+  margin-right: 16px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  box-shadow: 0 10px 22px rgba(29, 78, 216, 0.2);
+  overflow: hidden;
+}
+
+.logo .ant-avatar {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 12px !important;
+}
+
+.ant-layout-content {
+  padding: 40px 24px 0 !important;
+}
+
+.ant-layout-footer {
+  background: var(--surface);
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  padding: 20px 50px;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
 }

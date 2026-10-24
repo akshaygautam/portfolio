@@ -1,7 +1,7 @@
 .resource-list {
-  background-color: #2234ae;
-  background-image: linear-gradient(315deg, #2234ae 0%, #191714 74%);
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #eaf7f5 0%, #edf4ff 100%);
 }
 .resource-list h1 {
-  color: white;
+  color: var(--text);
 }

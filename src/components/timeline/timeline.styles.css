@@ -1,6 +1,18 @@
 .timeline {
-  color: white;
+  color: var(--text);
   width: auto;
-  font-size: xx-large;
-  margin:20px
+  font-size: 1rem;
+  margin: 16px 0 0;
+}
+
+.timeline .ant-timeline-item-content {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 0.96rem;
+}
+
+.timeline .ant-timeline-item-head {
+  background: var(--secondary);
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.14);
 }

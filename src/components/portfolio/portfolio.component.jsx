@@ -11,7 +11,7 @@ export const Portfolio = ({ content }) => {
           src={content.imageURL}
         />
       </a>
-      <h3 style={{ color: "white", marginTop: "2px" }} className="text-primary">
+      <h3 style={{ color: "var(--text)", marginTop: "2px" }}>
         {content.displayInfo}
       </h3>
     </div>
