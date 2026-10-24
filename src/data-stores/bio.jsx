@@ -10,9 +10,24 @@ export default [
   },
   {
     educationTimeLine: [
-      { label: "MRIU", date: "2013–2017", detail: "B.Tech" },
-      { label: "Ramjas School", date: "2012", detail: "12th" },
-      { label: "Loyal Public School", date: "2010", detail: "10th" },
+      {
+        label: "MRIU",
+        date: "2013–2017",
+        detail: "B.Tech",
+        logo: "https://www.google.com/s2/favicons?domain=manavrachna.edu.in&sz=64",
+      },
+      {
+        label: "Ramjas School",
+        date: "2012",
+        detail: "12th",
+        logo: `${import.meta.env.BASE_URL}assets/schools/ramjas-school.gif`,
+      },
+      {
+        label: "Loyal Public School",
+        date: "2010",
+        detail: "10th",
+        logo: `${import.meta.env.BASE_URL}assets/schools/loyal-public-school.png`,
+      },
     ],
     professionalTimeLine: [
       {

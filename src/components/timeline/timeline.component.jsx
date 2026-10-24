@@ -2,9 +2,20 @@ import React from "react";
 import "./timeline.styles.css";
 
 export const TimeLine = ({ timeLine, title }) => (
-  <section className="timeline-section" aria-label={title}>
+  <section
+    className={`timeline-section${title === "Education" ? " timeline-section--education" : ""}`}
+    aria-label={title}
+  >
     <h2 className="timeline-title">{title}</h2>
-    <ol className="timeline">
+    <ol
+      className={`timeline${title === "Education" ? " education-cards" : ""}`}
+      aria-label={
+        title === "Education"
+          ? "Education history; scroll horizontally to view all entries"
+          : undefined
+      }
+      tabIndex={title === "Education" ? 0 : undefined}
+    >
       {timeLine.map((item) => (
         <li
           className="timeline-entry"
@@ -12,7 +23,8 @@ export const TimeLine = ({ timeLine, title }) => (
         >
           <div
             className={`timeline-card${
-              title === "Work Experience" && !/present/i.test(item.date)
+              title === "Education" ||
+              (title === "Work Experience" && !/present/i.test(item.date))
                 ? " timeline-card-achieved"
                 : ""
             }`}
@@ -26,6 +38,11 @@ export const TimeLine = ({ timeLine, title }) => (
                   alt=""
                   aria-hidden="true"
                 />
+              )}
+              {item.mark && (
+                <span className="timeline-company-mark" aria-hidden="true">
+                  {item.mark}
+                </span>
               )}
               {item.label}
             </h3>

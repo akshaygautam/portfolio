@@ -60,7 +60,7 @@ const App = () => {
             <div className="logo">
               <Avatar
                 shape="square"
-                src="https://img.icons8.com/officel/40/000000/popeye.png"
+                src={`${import.meta.env.BASE_URL}assets/akshay-gautam.jpg`}
               />
             </div>
           </Link>

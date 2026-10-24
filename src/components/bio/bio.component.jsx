@@ -43,13 +43,13 @@ export const Bio = ({ bio }) => {
                 ))}
               </ul>
             </div>
+            <TimeLine title="Education" timeLine={bio[1].educationTimeLine} />
             <SocialBand text="Know more" tooltipPlacement="bottom" />
           </div>
         </Col>
 
         <Col className="gutter-row bio-timeline-column" xs={24} sm={24} md={8} lg={8} xl={8} xxl={8}>
           <TimeLine title="Work Experience" timeLine={bio[1].professionalTimeLine} />
-          <TimeLine title="Education" timeLine={bio[1].educationTimeLine} />
         </Col>
       </Row>
     </Card>
