@@ -5,7 +5,7 @@ import { getCertificates, getBio } from "./data-stores/data-store-master-util";
 import { Content as MyContent } from "./components/content/content.component";
 import { Footer as MyFooter } from "./components/footer/footer.component";
 import { Loading3QuartersOutlined } from "@ant-design/icons";
-import { Route, Routes, useLocation, Link } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation, Link } from "react-router-dom";
 
 const antIcon = <Loading3QuartersOutlined style={{ fontSize: 24 }} spin />;
 const { Content, Footer, Header } = Layout;
@@ -17,7 +17,7 @@ const App = () => {
   const [bio, setBio] = useState(null);
 
   const headerOptions = useMemo(
-    () => [{ sequence: 1, title: "About me", link: "/" }],
+    () => [{ sequence: 1, title: "About me", link: "/about-me" }],
     []
   );
 
@@ -56,7 +56,7 @@ const App = () => {
     <div className="App">
       <Layout className="layout">
         <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
-          <Link to="/">
+          <Link to="/about-me">
             <div className="logo">
               <Avatar
                 shape="square"
@@ -77,7 +77,8 @@ const App = () => {
         <Content style={{ padding: "0 50px", marginTop: 64 }}>
           {loading ? renderSpinner() : (
             <Routes>
-              <Route path="/" element={renderHomePage()} />
+              <Route path="/" element={<Navigate to="/about-me" replace />} />
+              <Route path="/about-me" element={renderHomePage()} />
             </Routes>
           )}
           <FloatButton.BackTop />

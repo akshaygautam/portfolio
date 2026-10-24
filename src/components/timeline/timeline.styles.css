@@ -42,7 +42,7 @@
   border: 2px solid var(--surface);
   border-radius: 50%;
   background: var(--secondary);
-  box-shadow: 0 0 0 2px rgba(15, 118, 110, 0.2);
+  box-shadow: 0 0 0 2px rgba(70, 229, 211, 0.2);
   content: "";
 }
 
@@ -50,21 +50,28 @@
   padding: 12px 14px;
   border: 1px solid var(--border);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 6px 18px rgba(30, 58, 95, 0.06);
+  background: rgba(255, 255, 255, 0.035);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+  transition: box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.timeline-entry:hover .timeline-card,
+.timeline-entry:focus-within .timeline-card {
+  border-color: rgba(70, 229, 211, 0.42);
+  box-shadow: 0 8px 24px rgba(70, 229, 211, 0.12);
 }
 
 .timeline-card-achieved {
-  border-color: rgba(71, 85, 105, 0.22);
-  background: linear-gradient(135deg, #e8edf4, #e1e8f0);
-  box-shadow: inset 3px 0 0 #64748b, 0 5px 14px rgba(30, 58, 95, 0.08);
+  border-color: rgba(70, 229, 211, 0.24);
+  background: linear-gradient(135deg, #1a2828, #172122);
+  box-shadow: inset 3px 0 0 var(--secondary), 0 5px 14px rgba(0, 0, 0, 0.2);
 }
 
 .timeline-date {
   display: inline-block;
   margin-bottom: 6px;
   padding: 3px 8px;
-  border-radius: 999px;
+  border-radius: 4px;
   background: var(--surface-muted);
   color: var(--primary);
   font-size: 0.75rem;
@@ -90,7 +97,7 @@
   padding: 2px;
   border: 1px solid var(--border);
   border-radius: 6px;
-  background: #ffffff;
+  background: #f4f5ef;
   object-fit: contain;
 }
 
@@ -101,9 +108,9 @@
   height: 24px;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(71, 85, 105, 0.3);
+  border: 1px solid rgba(198, 255, 94, 0.3);
   border-radius: 6px;
-  background: #64748b;
+  background: #25302a;
   color: #ffffff;
   font-size: 0.68rem;
   font-weight: 800;
@@ -126,12 +133,12 @@
   overflow-x: auto;
   padding: 4px 4px 12px;
   scroll-snap-type: x mandatory;
-  scrollbar-color: rgba(71, 85, 105, 0.45) transparent;
+  scrollbar-color: rgba(70, 229, 211, 0.45) transparent;
 }
 
 .education-cards:focus-visible {
   border-radius: 8px;
-  outline: 3px solid rgba(71, 85, 105, 0.35);
+  outline: 3px solid rgba(70, 229, 211, 0.4);
   outline-offset: 2px;
 }
 
@@ -146,8 +153,8 @@
 
 .education-cards .timeline-card-achieved {
   border-color: rgba(71, 85, 105, 0.28);
-  background: linear-gradient(135deg, #e8edf4, #dce3ec);
-  box-shadow: inset 3px 0 0 #64748b, 0 5px 14px rgba(30, 58, 95, 0.08);
+  background: linear-gradient(135deg, #1a2828, #172122);
+  box-shadow: inset 3px 0 0 var(--secondary), 0 5px 14px rgba(0, 0, 0, 0.2);
 }
 
 .education-cards .timeline-card {
@@ -180,7 +187,7 @@
 }
 
 .education-cards .timeline-company-mark {
-  background: #475569;
+  background: #25302a;
 }
 
 @media (min-width: 768px) {
@@ -202,5 +209,11 @@
 
   .education-cards .timeline-entry {
     flex-basis: min(190px, 72vw);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-card {
+    transition: none;
   }
 }

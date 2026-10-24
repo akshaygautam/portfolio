@@ -4,16 +4,19 @@
   flex-direction: column;
   overflow: hidden;
   border: 1px solid var(--border);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.86);
-  box-shadow: 0 8px 22px rgba(30, 58, 95, 0.07);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
 .credential-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(29, 78, 216, 0.28);
-  box-shadow: 0 14px 30px rgba(30, 58, 95, 0.12);
+  border-color: rgba(70, 229, 211, 0.42);
+  box-shadow:
+    0 0 0 1px rgba(70, 229, 211, 0.12),
+    0 14px 30px rgba(0, 0, 0, 0.32),
+    0 0 22px rgba(70, 229, 211, 0.1);
 }
 
 .credential-image {
@@ -22,7 +25,7 @@
   height: 140px;
   padding: 12px;
   border-bottom: 1px solid var(--border);
-  background: linear-gradient(135deg, #f7faff, #eef7f5);
+  background: linear-gradient(135deg, #1b2729, #152022);
   object-fit: contain;
 }
 
@@ -47,7 +50,7 @@
 
 .credential-meta span {
   padding: 4px 8px;
-  border-radius: 999px;
+  border-radius: 4px;
   background: var(--surface-muted);
   color: var(--muted);
   font-size: 0.7rem;
@@ -76,7 +79,7 @@
 
 .credential-body a:focus-visible {
   border-radius: 3px;
-  outline: 3px solid rgba(29, 78, 216, 0.3);
+  outline: 3px solid rgba(70, 229, 211, 0.42);
   outline-offset: 3px;
 }
 

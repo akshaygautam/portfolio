@@ -11,10 +11,10 @@
 }
 
 .credentials-eyebrow {
-  color: var(--secondary);
+  color: var(--primary);
   font-size: 0.76rem;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -23,7 +23,7 @@
   color: var(--text);
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 800;
-  letter-spacing: -0.035em;
+  letter-spacing: 0;
 }
 
 .credentials-header p {
@@ -38,9 +38,9 @@
   min-height: 76px;
   align-content: center;
   justify-items: center;
-  border: 1px solid rgba(29, 78, 216, 0.15);
-  border-radius: 22px;
-  background: linear-gradient(145deg, #ffffff, #eaf2ff);
+  border: 1px solid rgba(198, 255, 94, 0.24);
+  border-radius: 8px;
+  background: linear-gradient(145deg, #202d27, #192321);
   color: var(--primary);
 }
 
@@ -81,7 +81,7 @@
 
 .credentials-all summary:focus-visible {
   border-radius: 4px;
-  outline: 3px solid rgba(29, 78, 216, 0.3);
+  outline: 3px solid rgba(70, 229, 211, 0.42);
   outline-offset: 4px;
 }
 

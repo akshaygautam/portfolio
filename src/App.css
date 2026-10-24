@@ -13,10 +13,10 @@
 }
 
 .ant-layout-header {
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(11, 16, 18, 0.94);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
-  box-shadow: 0 8px 24px rgba(30, 58, 95, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
 }
 
 .ant-layout-header .ant-menu {
@@ -28,19 +28,24 @@
 .ant-layout-header .ant-menu-item {
   color: var(--muted);
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
   border-bottom: 2px solid transparent !important;
 }
 
 .ant-layout-header .ant-menu-item:hover,
 .ant-layout-header .ant-menu-item-selected {
-  background: rgba(29, 78, 216, 0.08) !important;
-  border-bottom-color: var(--secondary) !important;
+  background: rgba(70, 229, 211, 0.06) !important;
+  border-bottom-color: var(--primary) !important;
 }
 
 .option {
   color: var(--text) !important;
   font-size: 1rem;
+}
+
+.ant-layout-header .ant-menu-item:hover .option,
+.ant-layout-header .ant-menu-item-selected .option {
+  color: var(--primary) !important;
 }
 
 .logo {
@@ -52,16 +57,17 @@
   justify-content: center;
   margin-top: 4px;
   margin-right: 16px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  box-shadow: 0 10px 22px rgba(29, 78, 216, 0.2);
+  border: 1px solid rgba(198, 255, 94, 0.38);
+  border-radius: 12px;
+  background: var(--surface-muted);
+  box-shadow: 0 0 18px rgba(70, 229, 211, 0.1);
   overflow: hidden;
 }
 
 .logo .ant-avatar {
   width: 42px !important;
   height: 42px !important;
-  border-radius: 12px !important;
+  border-radius: 8px !important;
 }
 
 .ant-layout-content {

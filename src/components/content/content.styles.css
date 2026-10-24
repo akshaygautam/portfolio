@@ -1,10 +1,10 @@
 .credentials-section {
   width: 100%;
-  border: 1px solid rgba(148, 163, 184, 0.18);
-  border-radius: 22px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--shadow);
-  background: linear-gradient(135deg, #ffffff, #eaf7f5);
+  background: linear-gradient(135deg, #151f21, #101719 72%);
 }
 
 .ant-space-vertical {
@@ -21,10 +21,10 @@
   gap: 16px;
   width: min(100%, 420px);
   margin: 4px auto;
-  color: var(--secondary);
+  color: var(--primary);
   font-size: 0.72rem;
   font-weight: 800;
-  letter-spacing: 0.14em;
+  letter-spacing: 0;
   text-align: center;
   text-transform: uppercase;
 }
@@ -33,12 +33,12 @@
 .content-transition::after {
   height: 1px;
   flex: 1;
-  background: linear-gradient(90deg, transparent, rgba(15, 118, 110, 0.32));
+  background: linear-gradient(90deg, transparent, rgba(70, 229, 211, 0.34));
   content: "";
 }
 
 .content-transition::after {
-  background: linear-gradient(90deg, rgba(15, 118, 110, 0.32), transparent);
+  background: linear-gradient(90deg, rgba(70, 229, 211, 0.34), transparent);
 }
 
 @media (prefers-reduced-motion: no-preference) {
