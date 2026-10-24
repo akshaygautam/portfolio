@@ -13,7 +13,6 @@ export const Bio = ({ bio }) => {
     interests,
     googleImpact,
     microsoftCdnImpact,
-    impact,
   } = bio[0];
 
   return (
@@ -77,16 +76,8 @@ export const Bio = ({ bio }) => {
           <span className="bio-eyebrow">Microsoft</span>
           <h2 id="word-impact-title">Word boot performance</h2>
           <p>
-            As a Software Engineer 2, I led Word performance work, reducing boot time across two separate processes.
+            As a Software Engineer 2, I led Word performance work that improved boot time across processes.
           </p>
-          <ul className="bio-impact-results">
-            {impact.map((result) => (
-              <li key={result.value}>
-                <strong>{result.value}</strong>
-                <span>{result.detail}</span>
-              </li>
-            ))}
-          </ul>
         </article>
       </section>
     </Card>

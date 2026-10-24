@@ -13,3 +13,5 @@
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }
+npm run build
+npx --yes gh-pages -d build -b gh-pages

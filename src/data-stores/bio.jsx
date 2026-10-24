@@ -4,15 +4,11 @@ export default [
     intro: "Hi I'm Akshay Gautam",
     subIntro: "Lead Software Engineer at Google Cloud",
     content:
-      "I build and scale software that makes complex systems faster and more reliable. Previously at Microsoft, I worked on content delivery and Word performance, reducing Word boot time by 1,400 ms in one process and 300 ms in another. I also mentor aspiring engineers at Scaler.",
+      "I build and scale software that makes complex systems faster and more reliable. Previously at Microsoft, I worked on content delivery and Word performance, contributing to faster boot times. I also mentor aspiring engineers at Scaler.",
     googleImpact:
-      "As Lead Software Engineer, I led two L4 and two L3 engineers to build a new automation workflow and reporting platform, enabling Google Cloud Support to create automations and resolve customer issues more effectively.",
+      "As Lead Software Engineer, I led two L4 and two L3 engineers to build a new automation workflow and reporting platform for Google Cloud Support, helping teams create automations and resolve customer issues more effectively.",
     microsoftCdnImpact:
-      "Modernized the CDN architecture across Microsoft 365 apps, making it easier to switch between CDN providers based on availability.",
-    impact: [
-      { value: "1,400 ms", detail: "boot-time reduction in one process" },
-      { value: "300 ms", detail: "boot-time reduction in a separate process" },
-    ],
+      "Modernized the CDN architecture across Microsoft 365 apps. Requests are routed to an available CDN based on request location and where the requested file is stored.",
     interests: ["Singing", "Gaming", "Learning new things"],
     imageURL: `${import.meta.env.BASE_URL}assets/akshay-gautam.jpg`,
   },

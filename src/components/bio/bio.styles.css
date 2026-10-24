@@ -95,34 +95,6 @@
   line-height: 1.65;
 }
 
-.bio-impact-results {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-  margin: 22px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.bio-impact-results li {
-  display: grid;
-  gap: 5px;
-  padding-left: 14px;
-  border-left: 2px solid var(--secondary);
-}
-
-.bio-impact-results strong {
-  color: var(--primary);
-  font-size: 1.8rem;
-  line-height: 1.15;
-}
-
-.bio-impact-results span {
-  color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
 .bio-portrait-frame {
   float: left;
   width: min(40%, 220px);
@@ -298,13 +270,4 @@
     margin-top: 4px;
   }
 
-  .bio-impact-results {
-    gap: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  .bio-impact-results {
-    grid-template-columns: 1fr;
-  }
 }
