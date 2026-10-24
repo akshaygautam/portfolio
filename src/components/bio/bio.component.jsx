@@ -5,7 +5,16 @@ import { SocialBand } from "../social-band/social-band.component";
 import { TimeLine } from "../timeline/timeline.component";
 
 export const Bio = ({ bio }) => {
-  const { imageURL, content, intro, subIntro, interests } = bio[0];
+  const {
+    imageURL,
+    content,
+    intro,
+    subIntro,
+    interests,
+    googleImpact,
+    microsoftCdnImpact,
+    impact,
+  } = bio[0];
 
   return (
     <Card className="bio">
@@ -52,6 +61,34 @@ export const Bio = ({ bio }) => {
           <TimeLine title="Work Experience" timeLine={bio[1].professionalTimeLine} />
         </Col>
       </Row>
+      <section className="bio-impacts" aria-labelledby="bio-impacts-title">
+        <h2 className="bio-impacts-title" id="bio-impacts-title">Impact</h2>
+        <article className="bio-impact" aria-labelledby="google-impact-title">
+          <span className="bio-eyebrow">Google</span>
+          <h2 id="google-impact-title">Support automation and reporting platform</h2>
+          <p>{googleImpact}</p>
+        </article>
+        <article className="bio-impact" aria-labelledby="microsoft-impact-title">
+          <span className="bio-eyebrow">Microsoft</span>
+          <h2 id="microsoft-impact-title">Microsoft 365 CDN architecture</h2>
+          <p>{microsoftCdnImpact}</p>
+        </article>
+        <article className="bio-impact" aria-labelledby="word-impact-title">
+          <span className="bio-eyebrow">Microsoft</span>
+          <h2 id="word-impact-title">Word boot performance</h2>
+          <p>
+            As a Software Engineer 2, I led Word performance work, reducing boot time across two separate processes.
+          </p>
+          <ul className="bio-impact-results">
+            {impact.map((result) => (
+              <li key={result.value}>
+                <strong>{result.value}</strong>
+                <span>{result.detail}</span>
+              </li>
+            ))}
+          </ul>
+        </article>
+      </section>
     </Card>
   );
 };

@@ -2,9 +2,17 @@ export default [
   {
     id: 1,
     intro: "Hi I'm Akshay Gautam",
-    subIntro: "Google Cloud",
+    subIntro: "Lead Software Engineer at Google Cloud",
     content:
-      "I build and scale software that makes complex systems faster and more reliable. Previously at Microsoft, I worked on content delivery and Word performance, including a 300 ms reduction in boot time. I also mentor aspiring engineers at Scaler.",
+      "I build and scale software that makes complex systems faster and more reliable. Previously at Microsoft, I worked on content delivery and Word performance, reducing Word boot time by 1,400 ms in one process and 300 ms in another. I also mentor aspiring engineers at Scaler.",
+    googleImpact:
+      "As Lead Software Engineer, I led two L4 and two L3 engineers to build a new automation workflow and reporting platform, enabling Google Cloud Support to create automations and resolve customer issues more effectively.",
+    microsoftCdnImpact:
+      "Modernized the CDN architecture across Microsoft 365 apps, making it easier to switch between CDN providers based on availability.",
+    impact: [
+      { value: "1,400 ms", detail: "boot-time reduction in one process" },
+      { value: "300 ms", detail: "boot-time reduction in a separate process" },
+    ],
     interests: ["Singing", "Gaming", "Learning new things"],
     imageURL: `${import.meta.env.BASE_URL}assets/akshay-gautam.jpg`,
   },
@@ -34,7 +42,7 @@ export default [
         label: "Google",
         date: "Sep 2025 – Present",
         detail:
-          "Lead Software Engineer · Designing and scaling Google Cloud support infrastructure.",
+          "Lead Software Engineer · Leading four L3 engineers to modernize and maintain a mission-critical, heavily queried Google Cloud Support backbone service with stringent low-latency requirements.",
         logo: "https://www.google.com/s2/favicons?domain=google.com&sz=64",
       },
       {
@@ -47,7 +55,7 @@ export default [
         label: "Microsoft",
         date: "Aug 2021 – Sep 2025",
         detail:
-          "Software Engineer 2 · Led 1CDN implementation and Word performance work, reducing boot time by 300 ms.",
+          "Software Engineer 2 · Modernized CDN architecture across Microsoft 365 apps and improved Word boot performance.",
         logo: "https://www.google.com/s2/favicons?domain=microsoft.com&sz=64",
       },
       {
@@ -60,7 +68,7 @@ export default [
       {
         label: "G4S IT Services",
         date: "Feb 2017 – Mar 2019",
-        detail: "Associate Systems Developer · Built APIs and frontend features for the Javelin product.",
+        detail: "Associate Systems Developer · Owned the full UI for the Javelin ERP, built with AngularJS, and developed APIs and frontend features.",
         logo: "https://www.google.com/s2/favicons?domain=g4s.com&sz=64",
       },
     ]

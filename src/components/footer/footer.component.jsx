@@ -8,12 +8,6 @@ export const Footer = () => {
       <div className="footer">
         <SocialBand
           text="Connect On"
-          textStyle={{
-            margin: "10px",
-            color: "black",
-            fontSize: "x-large",
-          }}
-          iconStyle={{ color: "black", fontSize: "20px", margin: "5px" }}
           tooltipPlacement="top"
         />
       </div>

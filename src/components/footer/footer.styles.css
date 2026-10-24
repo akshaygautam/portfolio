@@ -1,0 +1,41 @@
+.footer {
+	color: var(--muted);
+}
+
+.footer .social-band-label {
+	margin: 10px 0;
+	color: var(--text);
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.footer .social-band-links {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+.footer .social-band-link {
+	display: inline-flex;
+	width: 40px;
+	height: 40px;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid var(--border);
+	border-radius: 8px;
+	background: var(--surface-muted);
+	color: var(--secondary);
+	font-size: 18px;
+	transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+
+.footer .social-band-link:hover {
+	border-color: rgba(70, 229, 211, 0.42);
+	background: #202d30;
+	color: var(--primary);
+}
+
+.footer .social-band-link:focus-visible {
+	outline: 3px solid rgba(70, 229, 211, 0.5);
+	outline-offset: 3px;
+}
