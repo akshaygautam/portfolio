@@ -150,6 +150,7 @@ export default [
        category: "Software design",
        platform: "Coursera",
        featured: true,
+       featuredOrder: 3,
        imageURL:
          `${import.meta.env.BASE_URL}assets/certificates/oops_0.png`,
           siteURL: "https://www.coursera.org/account/accomplishments/specialization/certificate/BP7RFCCZPADB",
@@ -173,6 +174,7 @@ export default [
        category: "Google Cloud",
        platform: "Coursera",
        featured: true,
+       featuredOrder: 1,
        imageURL:
          `${import.meta.env.BASE_URL}assets/certificates/gcp_5.png`,
          siteURL: "https://www.coursera.org/account/accomplishments/specialization/certificate/X4WQ9S2X83BN",
@@ -184,6 +186,7 @@ export default [
       active: true,
       category: "Recognition",
       issuer: "Fareye",
+      displayOrder: 98,
       imageURL:
         `${import.meta.env.BASE_URL}assets/certificates/Hackathon Special Award Certificate - Akshay Gautam .png`,
       siteURL: "https://akshaygautam.github.io/portfolio/",
@@ -194,6 +197,7 @@ export default [
     created: "2021/12/23 00:01",
     active: true,
     category: "Professional development",
+    displayOrder: 97,
     imageURL:
       `${import.meta.env.BASE_URL}assets/certificates/block_chain_a2z.jpg`,
     siteURL: "https://akshaygautam.github.io/portfolio/",
@@ -206,6 +210,7 @@ export default [
   category: "Cloud certification",
   issuer: "Microsoft",
   featured: true,
+  featuredOrder: 2,
   imageURL:
     `${import.meta.env.BASE_URL}assets/certificates/Az-900.jpg`,
   siteURL: "https://akshaygautam.github.io/portfolio/",

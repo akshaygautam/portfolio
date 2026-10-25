@@ -123,6 +123,44 @@
   line-height: 1.5;
 }
 
+.timeline-impact {
+  margin-top: 8px;
+}
+
+.timeline-impact summary {
+  width: fit-content;
+  color: var(--secondary);
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 700;
+  list-style-position: inside;
+}
+
+.timeline-impact summary:hover {
+  color: var(--primary);
+}
+
+.timeline-impact summary:focus-visible {
+  border-radius: 3px;
+  outline: 3px solid rgba(70, 229, 211, 0.42);
+  outline-offset: 3px;
+}
+
+.timeline-impact ul {
+  display: grid;
+  gap: 7px;
+  margin: 8px 0 0;
+  padding: 9px 0 0 18px;
+  border-top: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.timeline-impact li::marker {
+  color: var(--primary);
+}
+
 .timeline-section--education .timeline-title {
   margin-top: 18px;
 }

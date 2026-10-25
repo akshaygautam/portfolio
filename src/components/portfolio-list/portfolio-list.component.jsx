@@ -3,13 +3,29 @@ import { Portfolio } from "../portfolio/portfolio.component";
 import "./portfolio-list.styles.css";
 
 export const PortfolioList = ({ title, portfolioContentList }) => {
-  const featuredCredentials = portfolioContentList.filter((item) => item.featured);
-  const additionalCredentials = portfolioContentList.filter((item) => !item.featured);
+  const featuredCredentials = portfolioContentList
+    .filter((item) => item.featured)
+    .sort((first, second) => first.featuredOrder - second.featuredOrder);
+  const featuredCredentialIds = new Set(featuredCredentials.map((item) => item.id));
+  const additionalCredentials = portfolioContentList.filter(
+    (item) => !featuredCredentialIds.has(item.id)
+  );
   const groupedCredentials = additionalCredentials.reduce((groups, item) => {
     const category = item.category || "Other credentials";
     groups[category] = [...(groups[category] || []), item];
     return groups;
   }, {});
+  const orderedCredentialGroups = Object.entries(groupedCredentials)
+    .map(([category, credentials]) => [
+      category,
+      [...credentials].sort(
+        (first, second) => (first.displayOrder || 0) - (second.displayOrder || 0)
+      ),
+    ])
+    .sort(
+      ([, first], [, second]) =>
+        (first[0].displayOrder || 0) - (second[0].displayOrder || 0)
+    );
 
   return (
     <section className="credentials-section" aria-labelledby="credentials-title">
@@ -33,9 +49,18 @@ export const PortfolioList = ({ title, portfolioContentList }) => {
 
       {additionalCredentials.length > 0 && (
         <details className="credentials-all">
-          <summary>View all {additionalCredentials.length} additional credentials</summary>
+          <summary>
+            <span className="credentials-all-copy">
+              <strong>View all credentials</strong>
+              <span>Browse {additionalCredentials.length} more, grouped by category</span>
+            </span>
+            <span className="credentials-all-count" aria-hidden="true">
+              {additionalCredentials.length}
+            </span>
+            <span className="credentials-all-chevron" aria-hidden="true" />
+          </summary>
           <div className="credentials-groups">
-            {Object.entries(groupedCredentials).map(([category, credentials]) => (
+            {orderedCredentialGroups.map(([category, credentials]) => (
               <section className="credentials-group" key={category}>
                 <h3>{category}</h3>
                 <div className="credentials-grid">

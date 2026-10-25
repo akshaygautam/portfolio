@@ -43,8 +43,10 @@ export const SocialBand = ({
             <GithubOutlined />
           </Tooltip>
         </a>
-        {/* <a
-          href="https://drive.google.com/file/d/1ZJuFFjg1Mmc7KcfhNG5c5j0LA5AHRrXp/view?usp=sharing"
+        <a
+          className="social-band-link"
+          aria-label="Resume"
+          href={`${import.meta.env.BASE_URL}assets/Akshay_Gautam_Resume.pdf`}
           target="_blank"
           rel="noopener noreferrer"
           style={iconStyle}
@@ -52,7 +54,7 @@ export const SocialBand = ({
           <Tooltip placement={tooltipPlacement} title="Resume">
             <FilePdfOutlined />
           </Tooltip>
-        </a> */}
+        </a>
         <a
           className="social-band-link"
           aria-label="Email"

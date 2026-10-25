@@ -11,8 +11,6 @@ export const Bio = ({ bio }) => {
     intro,
     subIntro,
     interests,
-    googleImpact,
-    microsoftCdnImpact,
   } = bio[0];
 
   return (
@@ -60,25 +58,26 @@ export const Bio = ({ bio }) => {
           <TimeLine title="Work Experience" timeLine={bio[1].professionalTimeLine} />
         </Col>
       </Row>
-      <section className="bio-impacts" aria-labelledby="bio-impacts-title">
-        <h2 className="bio-impacts-title" id="bio-impacts-title">Impact</h2>
-        <article className="bio-impact" aria-labelledby="google-impact-title">
-          <span className="bio-eyebrow">Google</span>
-          <h2 id="google-impact-title">Support automation and reporting platform</h2>
-          <p>{googleImpact}</p>
-        </article>
-        <article className="bio-impact" aria-labelledby="microsoft-impact-title">
-          <span className="bio-eyebrow">Microsoft</span>
-          <h2 id="microsoft-impact-title">Microsoft 365 CDN architecture</h2>
-          <p>{microsoftCdnImpact}</p>
-        </article>
-        <article className="bio-impact" aria-labelledby="word-impact-title">
-          <span className="bio-eyebrow">Microsoft</span>
-          <h2 id="word-impact-title">Word boot performance</h2>
-          <p>
-            As a Software Engineer 2, I led Word performance work that improved boot time across processes.
-          </p>
-        </article>
+      <section className="bio-contact" aria-labelledby="bio-contact-title">
+        <div>
+          <span className="bio-eyebrow">Get in touch</span>
+          <h2 id="bio-contact-title">Let’s connect</h2>
+          <p>Have an interesting opportunity or just want to talk software? I’d love to hear from you.</p>
+        </div>
+        <div className="bio-contact-actions">
+          <a className="bio-contact-link bio-contact-link-primary" href="mailto:akshaygautamofficial@gmail.com">
+            Email me
+          </a>
+          <a
+            className="bio-contact-link"
+            href="https://www.linkedin.com/in/akshay-gautam-74577a117/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Connect on LinkedIn
+            <span aria-hidden="true"> ↗</span>
+          </a>
+        </div>
       </section>
     </Card>
   );

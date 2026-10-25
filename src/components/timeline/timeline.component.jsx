@@ -47,6 +47,16 @@ export const TimeLine = ({ timeLine, title }) => (
               {item.label}
             </h3>
             {item.detail && <p className="timeline-detail">{item.detail}</p>}
+            {item.impact && (
+              <details className="timeline-impact">
+                <summary>View impact</summary>
+                <ul>
+                  {item.impact.map((impact) => (
+                    <li key={impact}>{impact}</li>
+                  ))}
+                </ul>
+              </details>
+            )}
           </div>
         </li>
       ))}
